@@ -1,9 +1,7 @@
-body {
-    background-color: lightgray;
-}
+@import url(fontawesome-all.min.css);
 
 #wrapper {
-    background-color: whitesmoke;
+    background-color: lightgray;
     text-align: center;
     padding: 1em;
 }
