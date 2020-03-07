@@ -1,40 +1,94 @@
 @import url('fontawesome-all.min.css');
 @import url('https://fonts.googleapis.com/css?family=Spartan&display=swap');
 
-$primary-color: rgb(30, 30, 30);
+
+/* Variables */
+
+$primary-color: rgb(26, 26, 26);
 $secondary-color: #eece1a;
 $text-color: whitesmoke;
 $background-img: url(../images/abstract.jpg);
+$background-opacity: 0.9;
+
+/* Mixes */
 
 @mixin ease-out {
     transition: all .2s ease-in;
 }
 
+@mixin gradient-text {
+    background: -webkit-linear-gradient(red, yellow);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+    letter-spacing: .6rem;
+}
+
 @mixin border {
-    border-radius: .1rem;
+    border-radius: .3rem;
     border-style: solid;
     border-color: lighten($primary-color, 12);
     border-width: thin;
 }
 
+@mixin background {
+    background: $background-img;
+    background-attachment: fixed;
+    background-size: cover;
+
+    &:after {
+        content: '';
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        background: rgba($primary-color, $background-opacity);
+    }
+}
+
 * {
+    scroll-behavior: smooth;
     box-sizing: border-box;
 }
 
+/* Header section */
+
 header {
-    font-size: 2em;
-    text-align: center;
+    padding: 7rem 0rem;
+    height: 90vh;
+
+    & h1, p {
+        margin: 0;
+        padding: 0;
+        @include gradient-text();
+    }
+
+    & p {
+        font-size: 2rem;     
+    }
+
+
+    & h1 {
+        font-size: 5rem;
+        padding: 2rem 0rem;
+        line-height: 1.4;
+    }
 }
 
 body {
-    background: $primary-color;
+    @include background();
     color: $text-color;
     font-family: 'Spartan', sans-serif;
-    font-weight: 200;
+    font-weight: lighter;
+    letter-spacing: .1rem;
+    line-height: 1.5;
     height: 100%;
     margin: 0;
-    line-height: 1.5;
 }
+
+/* Navigation section */
 
 #nav {
     @include border();
@@ -43,24 +97,26 @@ body {
 
 #nav ul {
     display: grid;
-    // grid-gap: 1em;
     grid-template-columns: repeat(3, 1fr);
-    margin-bottom: .8rem;
     padding: 0;
+    margin: .5rem 1rem;
     list-style: none;
     text-align: center;
-
 }
 
 #nav ul li {
-    border-radius: .1rem;
-    margin: 0rem 1rem;
-    padding: .5rem;
+    @include border();
+    margin: 0rem .5rem;
+    padding: .9rem 0rem;
     background: lighten($primary-color, 18);
+
+    & a {
+        text-transform: uppercase;
+    }
 }
 
 #wrapper{
-    margin: 0rem 2rem;
+    margin: 0rem 3rem 3rem 3rem;
 }
 
 img {
@@ -83,12 +139,13 @@ img {
 
 
 section {
-    border-radius: .1rem;
-    border-style: solid;
-    border-color: lighten($primary-color, 12);
-    border-width: thin;
+    @include border();
     padding: 2rem;
     background: lighten($primary-color, 6);
+
+    & p {
+        margin: 0;;
+    }
 }
 
 #projects {
@@ -102,7 +159,6 @@ a {
     text-decoration: none;
 
     &:hover {
-        color: red;
         @include ease-out();
     }
 
@@ -111,7 +167,7 @@ a {
 
 .heading {
     margin: 0;
-    color: $secondary-color;
+    @include gradient-text();
     font-size: 2rem;
     padding-bottom: 1rem;
 }
@@ -122,6 +178,7 @@ a {
 }
 
 .tag {
+    @include border();
     background: lighten($primary-color, 14);
     padding: .3rem .9rem;
     margin-right: .4rem;
@@ -129,10 +186,12 @@ a {
 }
 
 
-.links > a{
+.links {
+    & a {
         text-align: center;
-        display: inline-block;
-        color: green;
+        // display: inline-block;
+        color: $text-color;
+    }
 }
 
 
