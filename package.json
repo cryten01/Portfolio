@@ -1,0 +1,22 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Responsive portfolio website",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w assets/sass/ -o assets/css/ --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cryten01/Portfolio.git"
+  },
+  "author": "\"Cryten\"",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cryten01/Portfolio/issues"
+  },
+  "homepage": "https://github.com/cryten01/Portfolio#readme",
+  "dependencies": {
+    "node-sass": "^4.13.1"
+  }
+}
