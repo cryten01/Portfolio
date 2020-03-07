@@ -1,8 +1,21 @@
 @import url(fontawesome-all.min.css);
+@import url('https://fonts.googleapis.com/css?family=Oxanium&display=swap');
+
+/* CSS Variables */
+:root {
+    --primary: #ddd;
+    --dark: #333;
+    --light: #fff;
+    --gray: rgb(119, 118, 118);
+}
+
+html {
+    font-family: 'Oxanium', cursive;
+    background-color: var(--dark);
+}
 
 #wrapper {
     background-color: lightgray;
-    text-align: center;
     padding: 1em;
 }
 
@@ -35,6 +48,11 @@
     grid-gap: 1em;
 }
 
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
 #item {
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -44,6 +62,16 @@
 #item > div {
     background-color: lightgray;
     padding: 1em;
+}
+
+.tag {
+    background: var(--gray);
+    color: var(--light);
+    padding: .6rem 1.3rem;
+    text-decoration: none;
+    border: 0;
+    margin-right: .4rem;
+    display: inline-block;
 }
 
 section 
