@@ -4,7 +4,7 @@
 
 /* Variables */
 
-$primary-color: rgb(26, 26, 26);
+$primary-color: rgba(26, 26, 26, 1.0);
 $secondary-color: #eece1a;
 $text-color: rgb(233, 233, 233);
 $background-img: url(../images/abstract.jpg);
@@ -162,8 +162,8 @@ header {
 }
 
 .solid-divider {
-    margin: 2rem 20%;    
-    height: 2px;
+    margin: 3rem 20%;    
+    height: 3px;
     background: lighten($primary-color, 12);
 }
 
@@ -236,16 +236,6 @@ a {
     display:inline-block;
 }
 
-
-.links {
-    & a {
-        text-align: center;
-        // display: inline-block;
-        color: $text-color;
-    }
-}
-
-
 .desc {
     padding: 1rem;
     display: flex;
@@ -255,5 +245,38 @@ a {
     & p {
         margin: 0;
         padding-bottom: 1rem;
+    }
+}
+
+/* Contact section */
+
+#contact {
+    text-align: center;
+    padding: 5%;
+
+    & a {
+        margin: 0rem 0.5rem;
+    }
+
+    & .contact-wrapper {
+        padding-top: 2rem;
+    }
+
+    & p {  
+        -webkit-text-fill-color: transparent;
+        text-transform: uppercase;
+        letter-spacing: .4rem;
+        line-height: 1.8em;
+        background: $text-color;
+        -webkit-background-clip: text;
+
+        font-weight: lighter;
+
+        margin: .5rem 0rem;
+
+        & b {
+            font-weight: bold;
+            font-size: 140%;
+        }
     }
 }
