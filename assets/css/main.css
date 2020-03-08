@@ -82,6 +82,9 @@ header {
   background: #484848; }
   #nav ul li a {
     text-transform: uppercase; }
+  #nav ul li:hover {
+    transition: all .2s ease-in;
+    background: #575757; }
 
 /* About section */
 #about {
@@ -183,7 +186,17 @@ a {
   text-align: center;
   padding: 5%; }
   #contact a {
-    margin: 0rem 0.5rem; }
+    border-radius: .3rem;
+    border-style: solid;
+    border-color: #393939;
+    border-width: thin;
+    display: inline-block;
+    margin: 0rem 1rem;
+    padding: .9rem;
+    background: #484848; }
+    #contact a:hover {
+      transition: all .2s ease-in;
+      background: #575757; }
   #contact .contact-wrapper {
     padding-top: 2rem; }
   #contact p {
