@@ -39,16 +39,22 @@ header {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-transform: uppercase;
-  letter-spacing: .6rem; }
+  letter-spacing: .6rem;
+  display: flex;
+  align-items: center; }
   header h1, header p {
     margin: 0;
     padding: 0; }
   header p {
-    font-size: 2rem; }
+    font-size: 1.4rem;
+    text-indent: 0.7rem; }
   header h1 {
     font-size: 5rem;
     padding: 2rem 0rem;
     line-height: 1.4; }
+
+#jobtype {
+  font-size: 2rem; }
 
 /* Navigation section */
 #nav {
