@@ -2,34 +2,16 @@
 @import url("https://fonts.googleapis.com/css?family=Spartan&display=swap");
 /* Variables */
 /* Mixes */
+/* General section */
 * {
   scroll-behavior: smooth;
   box-sizing: border-box; }
-
-/* Header section */
-header {
-  padding: 7rem 0rem;
-  height: 90vh; }
-  header h1, header p {
-    margin: 0;
-    padding: 0;
-    background: -webkit-linear-gradient(red, yellow);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-transform: uppercase;
-    letter-spacing: .6rem; }
-  header p {
-    font-size: 2rem; }
-  header h1 {
-    font-size: 5rem;
-    padding: 2rem 0rem;
-    line-height: 1.4; }
 
 body {
   background: url(../images/abstract.jpg);
   background-attachment: fixed;
   background-size: cover;
-  color: whitesmoke;
+  color: #e9e9e9;
   font-family: 'Spartan', sans-serif;
   font-weight: lighter;
   letter-spacing: .1rem;
@@ -45,6 +27,28 @@ body {
     height: 100%;
     z-index: -1;
     background: rgba(26, 26, 26, 0.9); }
+
+#wrapper {
+  margin: 0rem 3rem 3rem 3rem; }
+
+/* Header section */
+header {
+  padding: 7rem 0rem;
+  height: 90vh;
+  background: -webkit-linear-gradient(red, yellow);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+  letter-spacing: .6rem; }
+  header h1, header p {
+    margin: 0;
+    padding: 0; }
+  header p {
+    font-size: 2rem; }
+  header h1 {
+    font-size: 5rem;
+    padding: 2rem 0rem;
+    line-height: 1.4; }
 
 /* Navigation section */
 #nav {
@@ -73,8 +77,28 @@ body {
   #nav ul li a {
     text-transform: uppercase; }
 
-#wrapper {
-  margin: 0rem 3rem 3rem 3rem; }
+/* About section */
+#about {
+  text-align: center;
+  padding: 14%;
+  height: 100vh; }
+  #about .wrapper {
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+    letter-spacing: .6rem; }
+    #about .wrapper p {
+      letter-spacing: .4rem;
+      line-height: 1.8em;
+      background: #e9e9e9;
+      -webkit-background-clip: text; }
+      #about .wrapper p b {
+        font-weight: bold;
+        font-size: 140%; }
+
+.solid-divider {
+  margin: 2rem 20%;
+  height: 2px;
+  background: #393939; }
 
 img {
   width: 100%;
@@ -110,7 +134,7 @@ section {
   grid-gap: 6rem; }
 
 a {
-  color: whitesmoke;
+  color: #e9e9e9;
   text-decoration: none; }
   a:hover {
     transition: all .2s ease-in; }
@@ -141,7 +165,7 @@ a {
 
 .links a {
   text-align: center;
-  color: whitesmoke; }
+  color: #e9e9e9; }
 
 .desc {
   padding: 1rem;

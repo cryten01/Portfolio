@@ -6,7 +6,7 @@
 
 $primary-color: rgb(26, 26, 26);
 $secondary-color: #eece1a;
-$text-color: whitesmoke;
+$text-color: rgb(233, 233, 233);
 $background-img: url(../images/abstract.jpg);
 $background-opacity: 0.9;
 
@@ -48,33 +48,12 @@ $background-opacity: 0.9;
     }
 }
 
+
+/* General section */
+
 * {
     scroll-behavior: smooth;
     box-sizing: border-box;
-}
-
-/* Header section */
-
-header {
-    padding: 7rem 0rem;
-    height: 90vh;
-
-    & h1, p {
-        margin: 0;
-        padding: 0;
-        @include gradient-text();
-    }
-
-    & p {
-        font-size: 2rem;     
-    }
-
-
-    & h1 {
-        font-size: 5rem;
-        padding: 2rem 0rem;
-        line-height: 1.4;
-    }
 }
 
 body {
@@ -87,6 +66,36 @@ body {
     height: 100%;
     margin: 0;
 }
+
+#wrapper{
+    margin: 0rem 3rem 3rem 3rem;
+}
+
+
+/* Header section */
+
+header {
+    padding: 7rem 0rem;
+    height: 90vh;
+    @include gradient-text();
+
+    & h1, p {
+        margin: 0;
+        padding: 0;
+    }
+
+    & p {
+        font-size: 2rem;     
+    }
+
+    & h1 {
+        font-size: 5rem;
+        padding: 2rem 0rem;
+        line-height: 1.4;
+    }
+}
+
+
 
 /* Navigation section */
 
@@ -115,9 +124,41 @@ body {
     }
 }
 
-#wrapper{
-    margin: 0rem 3rem 3rem 3rem;
+
+/* About section */
+#about {
+    text-align: center;
+    padding: 14%;
+    height: 100vh;
+
+    & .wrapper {
+
+        -webkit-text-fill-color: transparent;
+        text-transform: uppercase;
+        letter-spacing: .6rem;
+
+         & p {  
+            letter-spacing: .4rem;
+            line-height: 1.8em;
+            background: $text-color;
+            -webkit-background-clip: text;
+
+            & b {
+                font-weight: bold;
+                font-size: 140%;
+            }
+         }
+    }
 }
+
+.solid-divider {
+    margin: 2rem 20%;    
+    height: 2px;
+    background: lighten($primary-color, 12);
+}
+
+
+
 
 img {
     width:100%;
