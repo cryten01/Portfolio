@@ -100,10 +100,26 @@ header {
   padding: .9rem 0rem;
   background: #484848; }
   #nav ul li a {
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    display: inline-block;
+    width: 100%;
+    height: 100%; }
   #nav ul li:hover {
     transition: all .2s ease-in;
     background: #575757; }
+
+/* Scroll points */
+#about-point {
+  position: relative;
+  top: -4.5rem; }
+
+#project-point {
+  position: relative;
+  top: -4.5rem; }
+
+#contact-point {
+  position: relative;
+  top: -4.5rem; }
 
 /* About section */
 #about {
@@ -222,4 +238,5 @@ header {
       font-size: 140%; }
 
 .empty {
-  height: 33vh; }
+  display: block;
+  min-height: 33vh; }

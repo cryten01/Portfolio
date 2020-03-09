@@ -151,12 +151,32 @@ header {
 
     & a {
         text-transform: uppercase;
+        display:inline-block;
+        width:100%;
+        height:100%;
     }
 
     &:hover{
         @include ease-out();
         background: lighten($primary-color, 24);
     }
+}
+
+/* Scroll points */
+
+#about-point {
+    position: relative; 
+    top: -4.5rem;
+}
+
+#project-point {
+    position: relative; 
+    top: -4.5rem;
+}
+
+#contact-point {
+    position: relative; 
+    top: -4.5rem;
 }
 
 
@@ -312,5 +332,6 @@ header {
 }
 
 .empty {
-    height: 33vh;
+    display: block;
+    min-height: 33vh;
 }
