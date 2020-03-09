@@ -13,7 +13,7 @@ body {
   background-size: cover;
   color: #e9e9e9;
   font-family: 'Spartan', sans-serif;
-  font-weight: lighter;
+  font-weight: 100;
   letter-spacing: .1rem;
   line-height: 1.5;
   height: 100%;
@@ -30,6 +30,22 @@ body {
 
 #wrapper {
   margin: 0rem 3rem 3rem 3rem; }
+
+a {
+  color: #e9e9e9;
+  text-decoration: none; }
+  a:hover {
+    transition: all .2s ease-in; }
+
+section {
+  border-radius: .3rem;
+  border-style: solid;
+  border-color: #393939;
+  border-width: thin;
+  padding: 2rem;
+  background: #292929; }
+  section p {
+    margin: 0; }
 
 /* Header section */
 header {
@@ -89,64 +105,45 @@ header {
 /* About section */
 #about {
   text-align: center;
-  padding: 14%;
-  height: 100vh; }
-  #about .wrapper {
-    -webkit-text-fill-color: transparent;
-    text-transform: uppercase;
-    letter-spacing: .6rem; }
-    #about .wrapper p {
-      letter-spacing: .4rem;
-      line-height: 1.8em;
-      background: #e9e9e9;
-      -webkit-background-clip: text; }
-      #about .wrapper p b {
-        font-weight: bold;
-        font-size: 140%; }
+  padding: 12%;
+  min-height: 100vh;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+  letter-spacing: .6rem; }
+  #about p {
+    letter-spacing: .4rem;
+    line-height: 1.8em;
+    background: #e9e9e9;
+    -webkit-background-clip: text; }
+    #about p b {
+      font-weight: bold;
+      font-size: 140%; }
 
 .solid-divider {
   margin: 3rem 20%;
   height: 3px;
   background: #393939; }
 
-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; }
-
-.img {
-  border-radius: .3rem;
-  border-style: solid;
-  border-color: #393939;
-  border-width: thin;
-  vertical-align: middle;
-  display: table-cell; }
+/* Project section */
+#projects {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-gap: 4rem; }
 
 .item {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 1rem; }
 
-section {
+.img {
   border-radius: .3rem;
   border-style: solid;
   border-color: #393939;
-  border-width: thin;
-  padding: 2rem;
-  background: #292929; }
-  section p {
-    margin: 0; }
-
-#projects {
-  display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
-  grid-gap: 6rem; }
-
-a {
-  color: #e9e9e9;
-  text-decoration: none; }
-  a:hover {
-    transition: all .2s ease-in; }
+  border-width: thin; }
+  .img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; }
 
 .heading {
   margin: 0;
@@ -158,28 +155,38 @@ a {
   font-size: 2rem;
   padding-bottom: 1rem; }
 
-.tags {
-  position: absolute;
-  bottom: 1rem; }
-
-.tag {
-  border-radius: .3rem;
-  border-style: solid;
-  border-color: #393939;
-  border-width: thin;
-  background: #3e3e3e;
-  padding: .3rem .9rem;
-  margin-right: .4rem;
-  display: inline-block; }
-
 .desc {
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  position: relative; }
-  .desc p {
-    margin: 0;
-    padding-bottom: 1rem; }
+  min-width: 50%;
+  display: block;
+  font-weight: 300;
+  padding: 1rem 1.6rem; }
+  .desc .p-wrapper {
+    padding-bottom: .8rem; }
+    .desc .p-wrapper h3 {
+      display: block;
+      max-width: 100%;
+      padding-bottom: .8rem;
+      word-wrap: break-word; }
+    .desc .p-wrapper p {
+      margin: 0;
+      padding-bottom: 1rem;
+      background: #e9e9e9;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      line-height: 1.6rem; }
+  .desc .tags {
+    position: relative;
+    bottom: 0; }
+  .desc .tag {
+    border-radius: .3rem;
+    border-style: solid;
+    border-color: #393939;
+    border-width: thin;
+    background: #3e3e3e;
+    padding: .3rem .9rem;
+    margin-right: .4rem;
+    margin-bottom: .9rem;
+    display: inline-block; }
 
 /* Contact section */
 #contact {
@@ -206,7 +213,6 @@ a {
     line-height: 1.8em;
     background: #e9e9e9;
     -webkit-background-clip: text;
-    font-weight: lighter;
     margin: .5rem 0rem; }
     #contact p b {
       font-weight: bold;
