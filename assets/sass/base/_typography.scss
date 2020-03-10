@@ -1,0 +1,89 @@
+
+body {
+    color: $text-color;
+    font-family: 'Spartan', sans-serif;
+    font-weight: 100;
+    letter-spacing: .1rem;
+    line-height: 1.5;
+}
+
+a {
+    color: $text-color;
+    text-decoration: none;
+}
+
+header {
+    @include gradient-text();
+
+    & p {
+        font-size: 1.4rem;  
+        text-indent: 0.7rem;    
+    }
+
+    h1 {
+        font-size: 5rem;
+        line-height: 1.4;
+    }
+}
+
+#nav ul li {
+
+    & a {
+        text-transform: uppercase;
+    }
+}
+
+#about {
+    text-align: center;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+    letter-spacing: .6rem;
+
+    & p {
+        letter-spacing: .4rem;
+        line-height: 1.8em;
+        background: $text-color;
+        -webkit-background-clip: text;
+
+        & b {
+            font-weight: bold;
+            font-size: 140%;
+        }
+    }
+}
+
+.heading {
+    @include gradient-text();
+    font-size: 2rem; 
+}
+
+.desc {
+    font-weight: 300;
+
+    & .p-wrapper {
+        & p {
+            background: $text-color;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1.6rem;
+        }
+    }
+}
+
+#contact {
+    text-align: center;
+
+    & p { 
+        -webkit-text-fill-color: transparent;
+        text-transform: uppercase;
+        letter-spacing: .4rem;
+        line-height: 1.8em;
+        background: $text-color;
+        -webkit-background-clip: text;
+
+        & b {
+            font-weight: bold;
+            font-size: 140%;
+        }
+    }
+}

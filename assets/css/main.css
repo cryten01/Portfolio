@@ -1,7 +1,77 @@
+/* Mixes */
+/* Variables */
 @import url("fontawesome-all.min.css");
 @import url("https://fonts.googleapis.com/css?family=Spartan&display=swap");
-/* Variables */
-/* Mixes */
+body {
+  color: #e9e9e9;
+  font-family: 'Spartan', sans-serif;
+  font-weight: 100;
+  letter-spacing: .1rem;
+  line-height: 1.5; }
+
+a {
+  color: #e9e9e9;
+  text-decoration: none; }
+
+header {
+  background: -webkit-linear-gradient(red, yellow);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+  letter-spacing: .6rem; }
+  header p {
+    font-size: 1.4rem;
+    text-indent: 0.7rem; }
+  header h1 {
+    font-size: 5rem;
+    line-height: 1.4; }
+
+#nav ul li a {
+  text-transform: uppercase; }
+
+#about {
+  text-align: center;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+  letter-spacing: .6rem; }
+  #about p {
+    letter-spacing: .4rem;
+    line-height: 1.8em;
+    background: #e9e9e9;
+    -webkit-background-clip: text; }
+    #about p b {
+      font-weight: bold;
+      font-size: 140%; }
+
+.heading {
+  background: -webkit-linear-gradient(red, yellow);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+  letter-spacing: .6rem;
+  font-size: 2rem; }
+
+.desc {
+  font-weight: 300; }
+  .desc .p-wrapper p {
+    background: #e9e9e9;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1.6rem; }
+
+#contact {
+  text-align: center; }
+  #contact p {
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+    letter-spacing: .4rem;
+    line-height: 1.8em;
+    background: #e9e9e9;
+    -webkit-background-clip: text; }
+    #contact p b {
+      font-weight: bold;
+      font-size: 140%; }
+
 /* General section */
 * {
   scroll-behavior: smooth;
@@ -11,11 +81,6 @@ body {
   background: url(../images/abstract.jpg);
   background-attachment: fixed;
   background-size: cover;
-  color: #e9e9e9;
-  font-family: 'Spartan', sans-serif;
-  font-weight: 100;
-  letter-spacing: .1rem;
-  line-height: 1.5;
   height: 100%;
   margin: 0; }
   body:after {
@@ -31,11 +96,8 @@ body {
 #wrapper {
   margin: 0rem 3rem 3rem 3rem; }
 
-a {
-  color: #e9e9e9;
-  text-decoration: none; }
-  a:hover {
-    transition: all .2s ease-in; }
+a:hover {
+  transition: all .2s ease-in; }
 
 section {
   border-radius: .3rem;
@@ -51,23 +113,13 @@ section {
 header {
   padding: 7rem 0rem;
   height: 90vh;
-  background: -webkit-linear-gradient(red, yellow);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-transform: uppercase;
-  letter-spacing: .6rem;
   display: flex;
   align-items: center; }
   header h1, header p {
     margin: 0;
     padding: 0; }
-  header p {
-    font-size: 1.4rem;
-    text-indent: 0.7rem; }
   header h1 {
-    font-size: 5rem;
-    padding: 2rem 0rem;
-    line-height: 1.4; }
+    padding: 2rem 0rem; }
 
 #jobtype {
   font-size: 2rem; }
@@ -100,7 +152,6 @@ header {
   padding: .9rem 0rem;
   background: #484848; }
   #nav ul li a {
-    text-transform: uppercase;
     display: inline-block;
     width: 100%;
     height: 100%; }
@@ -123,20 +174,8 @@ header {
 
 /* About section */
 #about {
-  text-align: center;
   padding: 12%;
-  min-height: 100vh;
-  -webkit-text-fill-color: transparent;
-  text-transform: uppercase;
-  letter-spacing: .6rem; }
-  #about p {
-    letter-spacing: .4rem;
-    line-height: 1.8em;
-    background: #e9e9e9;
-    -webkit-background-clip: text; }
-    #about p b {
-      font-weight: bold;
-      font-size: 140%; }
+  min-height: 100vh; }
 
 .solid-divider {
   margin: 3rem 20%;
@@ -166,18 +205,11 @@ header {
 
 .heading {
   margin: 0;
-  background: -webkit-linear-gradient(red, yellow);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-transform: uppercase;
-  letter-spacing: .6rem;
-  font-size: 2rem;
   padding-bottom: 1rem; }
 
 .desc {
   min-width: 50%;
   display: block;
-  font-weight: 300;
   padding: 1rem 1.6rem; }
   .desc .p-wrapper {
     padding-bottom: .8rem; }
@@ -188,11 +220,7 @@ header {
       word-wrap: break-word; }
     .desc .p-wrapper p {
       margin: 0;
-      padding-bottom: 1rem;
-      background: #e9e9e9;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      line-height: 1.6rem; }
+      padding-bottom: 1rem; }
   .desc .tags {
     position: relative;
     bottom: 0; }
@@ -209,7 +237,6 @@ header {
 
 /* Contact section */
 #contact {
-  text-align: center;
   padding: 5%; }
   #contact a {
     border-radius: .3rem;
@@ -226,16 +253,7 @@ header {
   #contact .contact-wrapper {
     padding-top: 2rem; }
   #contact p {
-    -webkit-text-fill-color: transparent;
-    text-transform: uppercase;
-    letter-spacing: .4rem;
-    line-height: 1.8em;
-    background: #e9e9e9;
-    -webkit-background-clip: text;
     margin: .5rem 0rem; }
-    #contact p b {
-      font-weight: bold;
-      font-size: 140%; }
 
 .empty {
   display: block;
