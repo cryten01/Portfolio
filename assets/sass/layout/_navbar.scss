@@ -1,0 +1,40 @@
+#nav {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+#nav ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 0;
+    margin: .5rem 1rem;
+}
+
+#nav ul li {
+    margin: 0rem .5rem;
+    padding: .9rem 0rem;
+
+    & a {
+        display:inline-block;
+        width:100%;
+        height:100%;
+    }
+}
+
+/* Scroll points */
+
+#about-point {
+    position: relative; 
+    top: -4.5rem;
+}
+
+#project-point {
+    position: relative; 
+    top: -4.5rem;
+}
+
+#contact-point {
+    position: relative; 
+    top: -4.5rem;
+}

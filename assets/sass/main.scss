@@ -4,8 +4,14 @@
 @import url('https://fonts.googleapis.com/css?family=Spartan&display=swap');
 
 // Base
-
 @import 'base/typography';
+
+// Layout
+@import 'layout/wrapper';
+@import 'layout/header';
+@import 'layout/navbar';
+@import 'layout/main';
+
 
 
 
@@ -20,10 +26,6 @@ body {
     @include background();
     height: 100%;
     margin: 0;
-}
-
-#wrapper{
-    margin: 0rem 3rem 3rem 3rem;
 }
 
 a {
@@ -42,61 +44,21 @@ section {
     }
 }
 
-/* Header section */
-
-header {
-    padding: 7rem 0rem;
-    height: 90vh;
-
-    display: flex;
-    align-items: center;
-
-    & h1, p {
-        margin: 0;
-        padding: 0;
-    }
-
-    & h1 {
-        padding: 2rem 0rem;
-    }
-}
-
-
-#jobtype {
-    font-size: 2rem;  
-}
-
 
 /* Navigation section */
 
 #nav {
     @include border();
     background: lighten($primary-color, 12);
-    position: sticky;
-    top: 0;
-    z-index: 1;
 }
 
 #nav ul {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    padding: 0;
-    margin: .5rem 1rem;
     list-style: none;
-    text-align: center;
 }
 
 #nav ul li {
     @include border();
-    margin: 0rem .5rem;
-    padding: .9rem 0rem;
     background: lighten($primary-color, 18);
-
-    & a {
-        display:inline-block;
-        width:100%;
-        height:100%;
-    }
 
     &:hover{
         @include ease-out();
@@ -104,51 +66,17 @@ header {
     }
 }
 
-/* Scroll points */
 
-#about-point {
-    position: relative; 
-    top: -4.5rem;
-}
-
-#project-point {
-    position: relative; 
-    top: -4.5rem;
-}
-
-#contact-point {
-    position: relative; 
-    top: -4.5rem;
-}
 
 
 /* About section */
 
-#about {
-    padding: 12%;
-    min-height: 100vh;
-}
-
 .solid-divider {
-    margin: 3rem 20%;    
-    height: 3px;
     background: lighten($primary-color, 12);
 }
 
 
 /* Project section */
-
-#projects {
-    display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-gap: 4rem;
-}
-
-.item {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 1rem;
-}
 
 .img {
     @include border();
@@ -160,57 +88,17 @@ header {
     }
 }
 
-.heading {
-    margin: 0;
-    padding-bottom: 1rem;
-}
-
 .desc {
-    min-width: 50%;
-    display: block;
-    padding: 1rem 1.6rem;
-
-    & .p-wrapper {
-        padding-bottom: .8rem;
-
-        & h3 {
-            display: block;
-            max-width: 100%;
-            padding-bottom: .8rem;
-            word-wrap: break-word;
-        }
-
-        & p {
-            margin: 0;
-            padding-bottom: 1rem;
-        }
-    }
-
-    & .tags {
-        position: relative;
-        bottom: 0;
-    }
-
     & .tag {
         @include border();
         background: lighten($primary-color, 14);
-        padding: .3rem .9rem;
-        margin-right: .4rem;
-        margin-bottom: .9rem;
-        display:inline-block;
     }
 }
 
-/* Contact section */
 
 #contact {
-    padding: 5%;
-
     & a {
         @include border();
-        display: inline-block;
-        margin: 0rem 1rem;
-        padding: .9rem;
         background: lighten($primary-color, 18);
 
         &:hover {
@@ -218,17 +106,4 @@ header {
             background: lighten($primary-color, 24);
         }
     }
-
-    & .contact-wrapper {
-        padding-top: 2rem;
-    }
-
-    & p {  
-        margin: .5rem 0rem;
-    }
-}
-
-.empty {
-    display: block;
-    min-height: 33vh;
 }

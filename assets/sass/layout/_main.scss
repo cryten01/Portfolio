@@ -1,0 +1,91 @@
+/* About section */
+
+#about {
+    padding: 12%;
+    min-height: 100vh;
+}
+
+.solid-divider {
+    margin: 3rem 20%;    
+    height: 3px;
+}
+
+
+/* Project section */
+
+#projects {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 4rem;
+}
+
+.item {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+}
+
+.heading {
+    margin: 0;
+    padding-bottom: 1rem;
+}
+
+.desc {
+    min-width: 50%;
+    display: block;
+    padding: 1rem 1.6rem;
+
+    & .p-wrapper {
+        padding-bottom: .8rem;
+
+        & h3 {
+            display: block;
+            max-width: 100%;
+            padding-bottom: .8rem;
+            word-wrap: break-word;
+        }
+
+        & p {
+            margin: 0;
+            padding-bottom: 1rem;
+        }
+    }
+
+    & .tags {
+        position: relative;
+        bottom: 0;
+    }
+
+    & .tag {
+        padding: .3rem .9rem;
+        margin-right: .4rem;
+        margin-bottom: .9rem;
+        display:inline-block;
+    }
+}
+
+
+/* Contact section */
+
+#contact {
+    padding: 5%;
+
+    & a {
+        display: inline-block;
+        margin: 0rem 1rem;
+        padding: .9rem;
+    }
+
+    & .contact-wrapper {
+        padding-top: 2rem;
+    }
+
+    & p {  
+        margin: .5rem 0rem;
+    }
+}
+
+.empty {
+    display: block;
+    min-height: 33vh;
+}
