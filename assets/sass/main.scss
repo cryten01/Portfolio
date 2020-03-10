@@ -37,7 +37,7 @@ a {
 section {
     @include border();
     padding: 2rem;
-    background: lighten($primary-color, 6);
+    background: $section-color;
 
     & p {
         margin: 0;
@@ -49,7 +49,7 @@ section {
 
 #nav {
     @include border();
-    background: lighten($primary-color, 12);
+    background: $nav-color;
 }
 
 #nav ul {
@@ -58,11 +58,11 @@ section {
 
 #nav ul li {
     @include border();
-    background: lighten($primary-color, 18);
+    background: $button-color;
 
     &:hover{
         @include ease-out();
-        background: lighten($primary-color, 24);
+        background: $hover-color;
     }
 }
 
@@ -72,7 +72,7 @@ section {
 /* About section */
 
 .solid-divider {
-    background: lighten($primary-color, 12);
+    background: $nav-color;
 }
 
 
@@ -91,7 +91,7 @@ section {
 .desc {
     & .tag {
         @include border();
-        background: lighten($primary-color, 14);
+        background: $nav-color;
     }
 }
 
@@ -99,11 +99,11 @@ section {
 #contact {
     & a {
         @include border();
-        background: lighten($primary-color, 18);
+        background: $button-color;
 
         &:hover {
             @include ease-out();
-            background: lighten($primary-color, 24);
+            background: $hover-color;
         }
     }
 }
