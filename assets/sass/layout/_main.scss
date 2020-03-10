@@ -17,17 +17,21 @@
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
     grid-gap: 4rem;
+
+    @media(max-width: $small-devices) {
+        display: inline-block;
+    }
 }
 
 .item {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 1rem;
-}
 
-.heading {
-    margin: 0;
-    padding-bottom: 1rem;
+    @media(max-width: $small-devices) {
+        display: inline-block;
+        padding-bottom: 2rem;
+    }
 }
 
 .desc {
@@ -37,6 +41,11 @@
 
     & .p-wrapper {
         padding-bottom: .8rem;
+
+        .heading {
+            margin: 0;
+            padding-bottom: 1rem;
+        }
 
         & h3 {
             display: block;
@@ -83,9 +92,4 @@
     & p {  
         margin: .5rem 0rem;
     }
-}
-
-.empty {
-    display: block;
-    min-height: 33vh;
 }

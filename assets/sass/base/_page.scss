@@ -1,0 +1,16 @@
+
+* {
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+body {
+    @include background();
+    height: 100%;
+    margin: 0;
+}
+
+// Ensures page width is always >=320px.
+@media(max-width: $small-devices) {
+    min-width: 320px;;
+}

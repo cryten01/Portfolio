@@ -1,11 +1,34 @@
 /* Mixes */
 @import url("fontawesome-all.min.css");
 @import url("https://fonts.googleapis.com/css?family=Spartan&display=swap");
+* {
+  scroll-behavior: smooth;
+  box-sizing: border-box; }
+
+body {
+  background: url(../images/abstract.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  height: 100%;
+  margin: 0; }
+  body:after {
+    content: '';
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: rgba(26, 26, 26, 0.9); }
+
+@media (max-width: 768px) {
+  min-width: 320px; }
+
 body {
   color: #e9e9e9;
-  font-family: 'Spartan', sans-serif;
-  font-weight: 100;
-  letter-spacing: .1rem;
+  font-family: "Spartan", sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.1rem;
   line-height: 1.5; }
 
 a {
@@ -26,6 +49,15 @@ header {
     line-height: 1.4; }
   header #jobtype {
     font-size: 2rem; }
+  @media (max-width: 768px) {
+    header p {
+      font-size: 1.0rem;
+      text-indent: 0.7rem; }
+    header h1 {
+      font-size: 4rem;
+      line-height: 1.4; }
+    header #jobtype {
+      font-size: 1.4rem; } }
 
 #nav ul {
   text-align: center; }
@@ -75,6 +107,20 @@ header {
     #contact p b {
       font-weight: bold;
       font-size: 140%; }
+
+#footer {
+  text-align: center;
+  color: #575757; }
+
+.img {
+  border-radius: .3rem;
+  border-style: solid;
+  border-color: #393939;
+  border-width: thin; }
+  .img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; }
 
 #wrapper {
   margin: 0rem 3rem 3rem 3rem; }
@@ -136,15 +182,18 @@ header {
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;
   grid-gap: 4rem; }
+  @media (max-width: 768px) {
+    #projects {
+      display: inline-block; } }
 
 .item {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 1rem; }
-
-.heading {
-  margin: 0;
-  padding-bottom: 1rem; }
+  @media (max-width: 768px) {
+    .item {
+      display: inline-block;
+      padding-bottom: 2rem; } }
 
 .desc {
   min-width: 50%;
@@ -152,6 +201,9 @@ header {
   padding: 1rem 1.6rem; }
   .desc .p-wrapper {
     padding-bottom: .8rem; }
+    .desc .p-wrapper .heading {
+      margin: 0;
+      padding-bottom: 1rem; }
     .desc .p-wrapper h3 {
       display: block;
       max-width: 100%;
@@ -181,31 +233,13 @@ header {
   #contact p {
     margin: .5rem 0rem; }
 
-.empty {
+footer {
   display: block;
-  min-height: 33vh; }
+  vertical-align: middle;
+  min-height: 33vh;
+  padding-top: 1rem; }
 
 /* General section */
-* {
-  scroll-behavior: smooth;
-  box-sizing: border-box; }
-
-body {
-  background: url(../images/abstract.jpg);
-  background-attachment: fixed;
-  background-size: cover;
-  height: 100%;
-  margin: 0; }
-  body:after {
-    content: '';
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    background: rgba(26, 26, 26, 0.9); }
-
 a:hover {
   transition: all .2s ease-in; }
 
@@ -245,16 +279,6 @@ section {
   background: #393939; }
 
 /* Project section */
-.img {
-  border-radius: .3rem;
-  border-style: solid;
-  border-color: #393939;
-  border-width: thin; }
-  .img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; }
-
 .desc .tag {
   border-radius: .3rem;
   border-style: solid;
