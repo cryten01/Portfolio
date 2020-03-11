@@ -9,6 +9,7 @@ body {
 
 a {
     color: _palette(text);
+    text-transform: uppercase;
     text-decoration: none;
 }
 
@@ -29,51 +30,51 @@ header {
         font-size: 2rem;
     }
 
-    @media(max-width: $small-devices) {
+    @media(max-width: _media(small)) {
 
-        & p {
+        p {
             font-size: 1.0rem;  
-            text-indent: 0.7rem;    
+            text-indent: 0.3rem;    
         }
     
         h1 {
-            font-size: 4rem;
+            font-size: 2.2rem;
             line-height: 1.4;
         }
     
         #jobtype {
-            font-size: 1.4rem;
+            font-size: 1.2rem;
         }
     }
 }
+
 
 #nav ul {
     text-align: center;
 }
 
-#nav ul li {
-
-    & a {
-        text-transform: uppercase;
-    }
-}
-
 #about {
     text-align: center;
-    -webkit-text-fill-color: transparent;
     text-transform: uppercase;
-    letter-spacing: .6rem;
 
-    & p {
+    p {
         letter-spacing: .4rem;
         line-height: 1.8em;
         background: _palette(text);
+        -webkit-text-fill-color: transparent;
         -webkit-background-clip: text;
 
-        & b {
+        b {
             font-weight: bold;
             font-size: 140%;
         }
+
+        @media(max-width: _media(xsmall)) {
+            font-size: .7rem;
+            word-wrap: break-word;
+        }
+
+  
     }
 }
 

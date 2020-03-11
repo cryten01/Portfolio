@@ -5,12 +5,20 @@ header {
     display: flex;
     align-items: center;
 
-    & h1, p {
+    p {
         margin: 0;
         padding: 0;
     }
 
-    & h1 {
+    h1 {
+        margin: 0;
         padding: 2rem 0rem;
+    }
+
+    @media(max-width: _media(small)) {
+        display: block;
+        height: 70vh;
+        margin-top: 6rem;
+
     }
 }

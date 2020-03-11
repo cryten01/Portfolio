@@ -1,3 +1,16 @@
 #wrapper{
     margin: 0rem 3rem 3rem 3rem;
+
+    @media(max-width: _media(xsmall)) {
+        margin: 0;
+
+        header {
+           padding-left: 3rem;
+        }
+
+        #nav ul li {
+            margin: 0rem 2rem;
+        }
+    }
 }
+

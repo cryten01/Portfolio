@@ -11,6 +11,6 @@ body {
 }
 
 // Ensures page width is always >=320px.
-@media(max-width: $small-devices) {
+@media(max-width: _media(small)) {
     min-width: 320px;;
 }

@@ -16,7 +16,6 @@
 	@return $map;
 }
 
-
 /// Gets a palette value.
 /// @param {string} $keys Key(s).
 /// @return {string} Value.
@@ -29,4 +28,11 @@
 /// @return {string} Value.
 @function _font($keys...) {
 	@return val($font, $keys...);
+}
+
+/// Gets a media query value.
+/// @param {string} $keys Key(s).
+/// @return {string} Value.
+@function _media($keys...) {
+	@return val($media, $keys...);
 }

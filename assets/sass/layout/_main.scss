@@ -3,6 +3,10 @@
 #about {
     padding: 12%;
     min-height: 100vh;
+
+    @media(max-width: _media(xsmall)) {
+        padding: 12% 10%
+    }
 }
 
 .solid-divider {
@@ -18,7 +22,7 @@
     grid-template-rows: 1fr 1fr 1fr;
     grid-gap: 4rem;
 
-    @media(max-width: $small-devices) {
+    @media(max-width: _media(small)) {
         display: inline-block;
     }
 }
@@ -28,7 +32,7 @@
     grid-template-columns: 1fr 1fr;
     grid-gap: 1rem;
 
-    @media(max-width: $medium-devices) {
+    @media(max-width: _media(medium)) {
         display: inline-block;
         padding-bottom: 2rem;
     }
