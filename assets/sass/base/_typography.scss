@@ -1,3 +1,4 @@
+$font-size: .7rem;
 
 body {
     color: _palette(text);
@@ -11,6 +12,10 @@ a {
     color: _palette(text);
     text-transform: uppercase;
     text-decoration: none;
+}
+
+ul {
+    list-style: none;
 }
 
 header {
@@ -70,28 +75,44 @@ header {
         }
 
         @media(max-width: _media(xsmall)) {
-            font-size: .7rem;
-            word-wrap: break-word;
+            font-size: $font-size;
         }
-
-  
     }
-}
-
-.heading {
-    @include gradient-text();
-    font-size: 2rem; 
 }
 
 .desc {
     font-weight: 300;
 
+    .heading {
+        @include gradient-text();
+        font-size: 2rem; 
+        text-align: left;
+    }
+
     & .p-wrapper {
+
         & p {
             background: _palette(text);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             line-height: 1.6rem;
+        }
+    }
+
+    @media(max-width: _media(xsmall)) {
+
+        .heading {
+            padding-top: 2rem;
+            font-size: 1.4rem;
+        }
+
+        .p-wrapper {
+            text-align: justify;
+            font-size: 80%;
+        }
+
+        .tags {
+            font-size: 80%;
         }
     }
 }
@@ -112,9 +133,23 @@ header {
             font-size: 140%;
         }
     }
+
+    @media(max-width: _media(xsmall)) {
+        font-size: $font-size;
+    }
 }
 
 #footer {
     text-align: center;
     color: _palette(hover);
+
+    @media(max-width: _media(xsmall)) {
+        font-size: $font-size;
+    }
+}
+
+.back-to-top {
+    text-align: center;
+    margin:0;
+    padding:0;
 }

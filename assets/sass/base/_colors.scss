@@ -1,0 +1,63 @@
+/* General section */
+
+a {
+    &:hover {
+        @include ease-out();
+    }
+}
+
+section {
+    @include border();
+    padding: 2rem;
+    background: _palette(section);
+
+    & p {
+        margin: 0;
+    }
+}
+
+
+/* Navigation section */
+
+#nav {
+    @include border();
+    background: _palette(nav);
+}
+
+#nav ul li {
+    @include border();
+    background: _palette(button);
+
+    &:hover{
+        @include ease-out();
+        background: _palette(hover);
+    }
+}
+
+/* About section */
+
+.solid-divider {
+    background: _palette(nav);
+}
+
+
+/* Project section */
+
+.desc {
+    & .tag {
+        @include border();
+        background: _palette(nav);
+    }
+}
+
+#contact {
+    & a {
+        @include border();
+        background: _palette(button);
+
+        &:hover {
+            @include ease-out();
+            background: _palette(hover);
+        }
+    }
+}

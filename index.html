@@ -9,7 +9,11 @@
 </head>
 
 <body>
+
+    <!-- Wrapper -->
     <div id="wrapper">
+
+        <!-- Header -->
         <header>
             <div class="wrapper-header">
                 <p>My name is</p>
@@ -19,16 +23,16 @@
         </header>
 
         <nav id="nav">
-            <ul>
-                <li class="v1"><a href="#about"><i class="fas fa-angle-down fa-3x"></i></a></li>
-                <li class="v2"><a href="#about-point">About</a></li>
-                <li class="v2"><a href="#project-point">Projects</a></li>
-                <li class="v2"><a href="#contact-point">Contact</a></li>
+            <ul class="button-container">
+                <li class="v1 button"><a href="#about"><i class="fas fa-angle-down fa-3x"></i></a></li>
+                <li class="v2 button"><a href="#about-point">About</a></li>
+                <li class="v2 button"><a href="#project-point">Projects</a></li>
+                <li class="v2 button"><a href="#contact-point">Contact</a></li>
             </ul>
         </nav>
 
         <div id="main">
-            <div id="about-point"></div>
+            <div id="about-point" class="scroll-point"></div>
             <section id="about">
                 <p>Fascinated by <b>inventions</b> and constantly driven by curiosity, I decided to contribute to the
                     <b>XR revolution</b>. Having knowledge in <b>engineering</b> <b>entrepreneurship</b> and
@@ -39,7 +43,7 @@
                     geared towards <b>Computer Graphics</b>, one of the fundamental building blocks of XR.</p>
             </section>
 
-            <div id="project-point"></div>
+            <div id="project-point" class="scroll-point"></div>
             <section id="projects">
                 <div class="item">
                     <div class="img">
@@ -105,7 +109,7 @@
                 </div>
             </section>
 
-            <div id="contact-point"></div>
+            <div id="contact-point" class="scroll-point"></div>
             <section id="contact">
                 <p>Curious about XR?</p>
                 <p>Need help for realizing your next XR Project?</p>
@@ -116,11 +120,19 @@
                 </div>
             </section>
         </div>
+
+        <footer id="footer">
+            <p class="copyright">&copy; 2020 Gerhard Andreas. All rights reserved.</p>
+        </footer>
+
+        <nav id="nav">
+            <ul class="button-container">
+                <li class="v1 button"><a href="#"><i class="fas fa-angle-up fa-3x"></i></a></li>
+            </ul>
+        </nav>
     </div>
 
-    <footer id="footer">
-        <p class="copyright">&copy; 2020 Gerhard Andreas. All rights reserved.</p>
-    </footer>
+
 
     <!-- Scripts -->
     <script src="assets/js/main.js"></script>

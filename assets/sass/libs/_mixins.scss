@@ -6,10 +6,11 @@
 
 @mixin gradient-text {
     background: _palette(gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
     text-transform: uppercase;
     letter-spacing: .6rem;
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 @mixin border {
@@ -23,6 +24,7 @@
     background: $background-img;
     background-attachment: fixed;
     background-size: cover;
+    background-position: 40% 0%;
 
     &:after {
         content: '';

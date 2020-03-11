@@ -9,6 +9,7 @@ body {
   background: url(../images/abstract.jpg);
   background-attachment: fixed;
   background-size: cover;
+  background-position: 40% 0%;
   height: 100%;
   margin: 0; }
   body:after {
@@ -36,12 +37,15 @@ a {
   text-transform: uppercase;
   text-decoration: none; }
 
+ul {
+  list-style: none; }
+
 header {
   background: -webkit-linear-gradient(red, yellow);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   text-transform: uppercase;
-  letter-spacing: .6rem; }
+  letter-spacing: .6rem;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; }
   header p {
     font-size: 1.4rem;
     text-indent: 0.7rem; }
@@ -77,24 +81,32 @@ header {
       font-size: 140%; }
     @media (max-width: 361px) {
       #about p {
-        font-size: .7rem;
-        word-wrap: break-word; } }
-
-.heading {
-  background: -webkit-linear-gradient(red, yellow);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-transform: uppercase;
-  letter-spacing: .6rem;
-  font-size: 2rem; }
+        font-size: 0.7rem; } }
 
 .desc {
   font-weight: 300; }
+  .desc .heading {
+    background: -webkit-linear-gradient(red, yellow);
+    text-transform: uppercase;
+    letter-spacing: .6rem;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 2rem;
+    text-align: left; }
   .desc .p-wrapper p {
     background: #e9e9e9;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     line-height: 1.6rem; }
+  @media (max-width: 361px) {
+    .desc .heading {
+      padding-top: 2rem;
+      font-size: 1.4rem; }
+    .desc .p-wrapper {
+      text-align: justify;
+      font-size: 80%; }
+    .desc .tags {
+      font-size: 80%; } }
 
 #contact {
   text-align: center; }
@@ -108,23 +120,104 @@ header {
     #contact p b {
       font-weight: bold;
       font-size: 140%; }
+  @media (max-width: 361px) {
+    #contact {
+      font-size: 0.7rem; } }
 
 #footer {
   text-align: center;
   color: #575757; }
+  @media (max-width: 361px) {
+    #footer {
+      font-size: 0.7rem; } }
+
+.back-to-top {
+  text-align: center;
+  margin: 0;
+  padding: 0; }
+
+/* General section */
+a:hover {
+  transition: all .2s ease-in; }
+
+section {
+  border-radius: .3rem;
+  border-style: solid;
+  border-color: #393939;
+  border-width: thin;
+  padding: 2rem;
+  background: #292929; }
+  section p {
+    margin: 0; }
+
+/* Navigation section */
+#nav {
+  border-radius: .3rem;
+  border-style: solid;
+  border-color: #393939;
+  border-width: thin;
+  background: #393939; }
+
+#nav ul li {
+  border-radius: .3rem;
+  border-style: solid;
+  border-color: #393939;
+  border-width: thin;
+  background: #484848; }
+  #nav ul li:hover {
+    transition: all .2s ease-in;
+    background: #575757; }
+
+/* About section */
+.solid-divider {
+  background: #393939; }
+
+/* Project section */
+.desc .tag {
+  border-radius: .3rem;
+  border-style: solid;
+  border-color: #393939;
+  border-width: thin;
+  background: #393939; }
+
+#contact a {
+  border-radius: .3rem;
+  border-style: solid;
+  border-color: #393939;
+  border-width: thin;
+  background: #484848; }
+  #contact a:hover {
+    transition: all .2s ease-in;
+    background: #575757; }
 
 .img {
   border-radius: .3rem;
   border-style: solid;
   border-color: #393939;
-  border-width: thin; }
+  border-width: thin;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center; }
   .img img {
     width: 100%;
-    height: 100%;
-    object-fit: cover; }
-  @media (max-width: 361px) {
-    .img {
-      display: none; } }
+    height: 100%; }
+
+.button-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: .5rem 1rem;
+  padding: 0; }
+
+.button {
+  margin: 0rem .4rem;
+  padding: .9rem 0rem; }
+  .button a {
+    display: inline-block;
+    width: 100%;
+    height: 100%; }
+  .button.v1 {
+    display: none; }
 
 #wrapper {
   margin: 0rem 3rem 3rem 3rem; }
@@ -132,9 +225,9 @@ header {
     #wrapper {
       margin: 0; }
       #wrapper header {
-        padding-left: 3rem; }
+        padding-left: 10%; }
       #wrapper #nav ul li {
-        margin: 0rem 2rem; } }
+        margin: 0 5%; } }
 
 header {
   padding: 7rem 0rem;
@@ -150,7 +243,7 @@ header {
   @media (max-width: 768px) {
     header {
       display: block;
-      height: 70vh;
+      height: 77vmax;
       margin-top: 6rem; } }
 
 #nav {
@@ -159,18 +252,6 @@ header {
   z-index: 1; }
   #nav .v1 {
     display: none; }
-  #nav ul {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    margin: .5rem 1rem;
-    padding: 0; }
-    #nav ul li {
-      margin: 0rem .4rem;
-      padding: .9rem 0rem; }
-      #nav ul li a {
-        display: inline-block;
-        width: 100%;
-        height: 100%; }
   @media (max-width: 361px) {
     #nav {
       position: relative; }
@@ -181,7 +262,6 @@ header {
       #nav ul {
         display: block; }
         #nav ul li {
-          margin: 0;
           padding: 0; } }
 
 /* Scroll points */
@@ -216,7 +296,7 @@ header {
   grid-gap: 4rem; }
   @media (max-width: 768px) {
     #projects {
-      display: inline-block; } }
+      display: block; } }
 
 .item {
   display: grid;
@@ -224,34 +304,36 @@ header {
   grid-gap: 1rem; }
   @media (max-width: 992px) {
     .item {
-      display: inline-block;
-      padding-bottom: 2rem; } }
-
-.desc {
-  min-width: 50%;
-  display: block;
-  padding: 1rem 1.6rem; }
-  .desc .p-wrapper {
-    padding-bottom: .8rem; }
-    .desc .p-wrapper .heading {
-      margin: 0;
-      padding-bottom: 1rem; }
-    .desc .p-wrapper h3 {
       display: block;
-      max-width: 100%;
-      padding-bottom: .8rem;
-      word-wrap: break-word; }
-    .desc .p-wrapper p {
-      margin: 0;
-      padding-bottom: 1rem; }
-  .desc .tags {
-    position: relative;
-    bottom: 0; }
-  .desc .tag {
-    padding: .3rem .9rem;
-    margin-right: .4rem;
-    margin-bottom: .9rem;
-    display: inline-block; }
+      padding-bottom: 4rem; } }
+  .item .desc {
+    min-width: 50%;
+    display: block;
+    padding: 1rem 1.6rem; }
+    @media (max-width: 992px) {
+      .item .desc {
+        padding: 0; } }
+    .item .desc .p-wrapper {
+      padding-bottom: .8rem; }
+      .item .desc .p-wrapper .heading {
+        margin: 0;
+        padding-bottom: 1rem; }
+      .item .desc .p-wrapper h3 {
+        display: block;
+        max-width: 100%;
+        padding-bottom: .8rem;
+        word-wrap: break-word; }
+      .item .desc .p-wrapper p {
+        margin: 0;
+        padding-bottom: 1rem; }
+    .item .desc .tags {
+      position: relative;
+      bottom: 0; }
+    .item .desc .tag {
+      padding: .3rem .9rem;
+      margin-right: .4rem;
+      margin-bottom: .9rem;
+      display: inline-block; }
 
 /* Contact section */
 #contact {
@@ -264,66 +346,16 @@ header {
     padding-top: 2rem; }
   #contact p {
     margin: .5rem 0rem; }
+  @media (max-width: 361px) {
+    #contact {
+      padding: 5% 12%; } }
 
 footer {
   display: block;
   vertical-align: middle;
   min-height: 33vh;
   padding-top: 1rem; }
-
-/* General section */
-a:hover {
-  transition: all .2s ease-in; }
-
-section {
-  border-radius: .3rem;
-  border-style: solid;
-  border-color: #393939;
-  border-width: thin;
-  padding: 2rem;
-  background: #292929; }
-  section p {
-    margin: 0; }
-
-/* Navigation section */
-#nav {
-  border-radius: .3rem;
-  border-style: solid;
-  border-color: #393939;
-  border-width: thin;
-  background: #393939; }
-
-#nav ul {
-  list-style: none; }
-
-#nav ul li {
-  border-radius: .3rem;
-  border-style: solid;
-  border-color: #393939;
-  border-width: thin;
-  background: #484848; }
-  #nav ul li:hover {
-    transition: all .2s ease-in;
-    background: #575757; }
-
-/* About section */
-.solid-divider {
-  background: #393939; }
-
-/* Project section */
-.desc .tag {
-  border-radius: .3rem;
-  border-style: solid;
-  border-color: #393939;
-  border-width: thin;
-  background: #393939; }
-
-#contact a {
-  border-radius: .3rem;
-  border-style: solid;
-  border-color: #393939;
-  border-width: thin;
-  background: #484848; }
-  #contact a:hover {
-    transition: all .2s ease-in;
-    background: #575757; }
+  @media (max-width: 361px) {
+    footer {
+      padding: 10% 20%;
+      height: 320px; } }
