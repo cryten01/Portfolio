@@ -1,14 +1,14 @@
 
 body {
-    color: $text-color;
-    font-family: $font-family;
-    font-weight: $font-weight;
-    letter-spacing: $letter-spacing;
+    color: _palette(text);
+    font-family: _font(family);
+    font-weight: _font(weight);
+    letter-spacing: _font(letter-spacing);
     line-height: 1.5;
 }
 
 a {
-    color: $text-color;
+    color: _palette(text);
     text-decoration: none;
 }
 
@@ -67,7 +67,7 @@ header {
     & p {
         letter-spacing: .4rem;
         line-height: 1.8em;
-        background: $text-color;
+        background: _palette(text);
         -webkit-background-clip: text;
 
         & b {
@@ -87,7 +87,7 @@ header {
 
     & .p-wrapper {
         & p {
-            background: $text-color;
+            background: _palette(text);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             line-height: 1.6rem;
@@ -103,7 +103,7 @@ header {
         text-transform: uppercase;
         letter-spacing: .4rem;
         line-height: 1.8em;
-        background: $text-color;
+        background: _palette(text);
         -webkit-background-clip: text;
 
         & b {
@@ -115,5 +115,5 @@ header {
 
 #footer {
     text-align: center;
-    color: $hover-color;
+    color: _palette(hover);
 }
