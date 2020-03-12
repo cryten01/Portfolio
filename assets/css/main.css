@@ -190,11 +190,14 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 1.8rem; }
+  margin-bottom: 1.8rem;
+  background: #1a1a1a; }
   .img img {
     width: 100%;
     height: 100%;
-    object-fit: cover; }
+    object-fit: cover;
+    opacity: 0.9;
+    border-radius: .3rem; }
 
 .button-container {
   display: grid;
@@ -291,6 +294,7 @@ header {
     padding: 1rem 1.6rem; }
     @media (max-width: 992px) {
       .item .desc {
+        height: auto;
         padding: 0; } }
     .item .desc .p-wrapper {
       padding-bottom: .8rem; }
@@ -310,7 +314,7 @@ header {
       padding: .3rem .9rem;
       margin-right: .4rem;
       margin-bottom: .9rem;
-      display: inline-block; }
+      display: inline-flex; }
 
 /* Contact section */
 #contact {
