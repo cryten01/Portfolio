@@ -14,142 +14,100 @@ a {
     text-decoration: none;
 }
 
-ul {
-    list-style: none;
+b {
+    font-weight: bold;
+    font-size: 140%;
 }
 
-header {
-    @include gradient-text();
+p {
+    text-align: justify;
+    font-size: 80%;
     
-    p {
-        font-size: 1.4rem;  
-        text-indent: 0.7rem;    
+    // background: _palette(text);
+    // -webkit-text-fill-color: transparent;
+    // -webkit-background-clip: text;
+
+    @media only screen and (min-width: _media(xsmall)) {
+        line-height: 1.6rem;
+        font-size: 100%;
     }
 
-    h1 {
+    &.copyright {
+        text-align: center;
+        color: _palette(hover);
+        font-size: .7rem;
+    
+        @media only screen and (min-width: _media(xsmall)) {
+            font-size: 1rem;
+        }
+    }
+}
+
+h1 {
+    font-size: 10.5vw;
+    line-height: 1.4;
+
+    @media only screen and (min-width: _media(xsmall)) {
         font-size: 5rem;
         line-height: 1.4;
     }
+}
 
-    #jobtype {
+h3 {
+    font-size: 1.2rem;
+
+    @media only screen and (min-width: _media(xsmall)) {
         font-size: 2rem;
     }
+}
 
-    @media(max-width: _media(small)) {
+h4 {
+    font-size: 1.0rem;  
 
-        p {
-            font-size: 1.0rem;  
-            text-indent: 0.3rem;    
-        }
-    
-        h1 {
-            font-size: 2.2rem;
-            line-height: 1.4;
-        }
-    
-        #jobtype {
-            font-size: 1.2rem;
-        }
+    @media only screen and (min-width: _media(xsmall)) {
+        font-size: 1.4rem;  
     }
 }
 
-
-#nav ul {
-    text-align: center;
-}
-
-#about {
-    text-align: center;
+.cinematic {
+    letter-spacing: .4rem;
+    line-height: 1.8em;
     text-transform: uppercase;
+    text-align: center;
+    background: _palette(text);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
 
-    p {
-        letter-spacing: .4rem;
-        line-height: 1.8em;
-        background: _palette(text);
-        -webkit-text-fill-color: transparent;
-        -webkit-background-clip: text;
-
-        b {
-            font-weight: bold;
-            font-size: 140%;
-        }
-
-        @media(max-width: _media(xsmall)) {
-            font-size: $font-size;
-        }
+    @media(max-width: _media(xsmall)) {
+        font-size: $font-size;
     }
 }
 
-.desc {
-    font-weight: 300;
+.heading {
+    padding-top: 2rem;
+    font-size: 1.24rem;
+    word-wrap: break-word;
 
-    .heading {
-        @include gradient-text();
+
+    @media only screen and (min-width: _media(xsmall)) {
         font-size: 2rem; 
         text-align: left;
     }
-
-    & .p-wrapper {
-
-        & p {
-            background: _palette(text);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            line-height: 1.6rem;
-        }
-    }
-
-    @media(max-width: _media(xsmall)) {
-
-        .heading {
-            padding-top: 2rem;
-            font-size: 1.4rem;
-        }
-
-        .p-wrapper {
-            text-align: justify;
-            font-size: 80%;
-        }
-
-        .tags {
-            font-size: 80%;
-        }
-    }
 }
 
-#contact {
-    text-align: center;
-
-    & p { 
-        -webkit-text-fill-color: transparent;
-        text-transform: uppercase;
-        letter-spacing: .4rem;
-        line-height: 1.8em;
-        background: _palette(text);
-        -webkit-background-clip: text;
-
-        & b {
-            font-weight: bold;
-            font-size: 140%;
-        }
-    }
-
-    @media(max-width: _media(xsmall)) {
-        font-size: $font-size;
-    }
+header, .heading {
+    @include gradient-text();
 }
 
-#footer {
-    text-align: center;
-    color: _palette(hover);
 
-    @media(max-width: _media(xsmall)) {
-        font-size: $font-size;
-    }
+#nav ul, #about, #contact {
+    text-align: center;
 }
 
-.back-to-top {
-    text-align: center;
-    margin:0;
-    padding:0;
+.tags {
+    font-size: 80%;
+
+    @media only screen and (min-width: _media(xsmall)) {
+        font-size: 100%;
+    }
 }

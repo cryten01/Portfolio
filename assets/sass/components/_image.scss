@@ -1,8 +1,8 @@
 .img {
   @include border();
 
-  display: flex; 
   position: relative;
+  display: flex; 
   justify-content: center; 
   align-items: center;
 

@@ -50,15 +50,12 @@
             padding-bottom: .8rem;
     
             .heading {
-                margin: 0;
-                padding-bottom: 1rem;
-            }
-    
-            & h3 {
                 display: block;
                 max-width: 100%;
+
+                margin: 0;
+                padding: 0;
                 padding-bottom: .8rem;
-                word-wrap: break-word;
             }
     
             & p {

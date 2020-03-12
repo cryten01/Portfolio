@@ -1,12 +1,9 @@
 footer {
-    display: block;
-    vertical-align: middle;
+    display: flexbox;
     min-height: 33vh;
-    padding-top: 1rem;
+    padding-top: 4rem;
 
     @media(max-width: _media(xsmall)) {
         padding: 10% 20%;
-
-        height: 320px;
     }
 }
