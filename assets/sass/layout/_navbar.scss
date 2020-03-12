@@ -7,17 +7,21 @@
         display: none;
     }
 
+    // &.back {
+    //     // display: none;
+    // }
+
 
     @media(max-width: _media(xsmall)) {
     
         position: relative;
 
-        .v2 {
-            display: none;
-        }
-
         .v1 {
             display: block;
+        }
+
+        .v2 {
+            display: none;
         }
 
         ul {
@@ -30,24 +34,17 @@
     }
 }
 
+.back-to-top {
+    display: block;
 
-
-
-
+    @media only screen and (min-width: _media(xsmall)) {
+        display: none;
+    }
+}
 
 /* Scroll points */
 
-#about-point {
-    position: relative; 
-    top: -4.5rem;
-}
-
-#project-point {
-    position: relative; 
-    top: -4.5rem;
-}
-
-#contact-point {
+.scroll-point {
     position: relative; 
     top: -4.5rem;
 }
