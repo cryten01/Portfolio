@@ -1,0 +1,13 @@
+{
+  "projects": [
+    {
+      "img": "assets/images/03-starman.png",
+      "title": "Starman's roadtrip to mars",
+      "desc": [
+        "Starman’s Roadtrip To Mars is a fully functional game written in C++ and OpenGL. The idea is dedicated to Elon Musk’s Falcon Heavy Launch which contained a tesla model s with a dummy that should reach mars.",
+        "Despite being a game, we set the focus on the game engine development itself. I implemented several effects such as particle systems, HDR, cell shading as well as native PhysX implementation."
+      ],
+      "tags": ["C/C++", "GLSL", "OpenGL", "PhysX"]
+    }
+  ]
+}
