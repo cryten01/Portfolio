@@ -1,13 +1,84 @@
 {
   "projects": [
     {
+      "img": "assets/images/05-wonderland.png",
+      "title": "RTR Engine",
+      "desc": [
+        "The RTR Engine is a small scope render engine designed for learning different engine concepts. It represents the follow up project for Starman’s Roadtrip to Mars and gets continously expanded with new features.",
+
+        "I rebuilt the entire engine from the ground up, added new features such as GUI support, advanced error logging, a camera-path generator tool and new grahic effects such as bloom and shadow mapping."
+      ],
+      "tags": ["C/C++", "C#", "Unity"]
+    },
+    {
+      "img": "assets/images/06-molecular.png",
+      "title": "Real time molecular dynamics simulation",
+      "desc": [
+        "The goal for this client server application was to effectively simulate molecular structures with constant frame rates over 60 FPS.",
+
+        "For this reason, I implemented a performance optimization technique called billboard impostor rendering, that reduces the number of vertices in the scene."
+      ],
+      "tags": ["C/C++", "HTML", "CSS", "Javascript"]
+    },
+    {
+      "img": "assets/images/02-controller.png",
+      "title": "Multi-sensoric vr controller",
+      "desc": [
+        "Goal for this research project was to build an alternative controller for VR environments.",
+
+        "I built a controller prototype with Arduino sensor modules, such as ultrasonic, sound, gyroscope and accelerometer. Then I processed the sensor data in a C++ application which communicated to a Unity application."
+      ],
+      "tags": ["C/C++", "C#", "Arduino", "Unity"]
+    },
+    {
+      "img": "assets/images/01-thesis.png",
+      "title": "VR 360 Learning App",
+      "desc": [
+        "During my bachelor thesis, I investigated the possibilities of VR 360 for learning and training environments.",
+
+        "Therefore, i developed a google cardboard application in Unity. Gaze interaction was used for answering questions during these videos."
+      ],
+      "tags": ["C#", "Google Cardboard", "Unity"]
+    },
+    {
       "img": "assets/images/03-starman.png",
       "title": "Starman's roadtrip to mars",
       "desc": [
         "Starman’s Roadtrip To Mars is a fully functional game written in C++ and OpenGL. The idea is dedicated to Elon Musk’s Falcon Heavy Launch which contained a tesla model s with a dummy that should reach mars.",
+
         "Despite being a game, we set the focus on the game engine development itself. I implemented several effects such as particle systems, HDR, cell shading as well as native PhysX implementation."
       ],
       "tags": ["C/C++", "GLSL", "OpenGL", "PhysX"]
+    },
+    {
+      "img": "assets/images/08-puzzle.png",
+      "title": "VR puzzle game",
+      "desc": [
+        "The goal for this research project was finding efficient ways to extend the game space environment.",
+
+        "We successfully developed a multiplayer capable prototype of a VR puzzle game within 2 months. Extending the game space environment was realized by using a platform that helped reducing motion sickness."
+      ],
+      "tags": ["C#", "HTC Vive", "Unity", "Leap Motion"]
+    },
+    {
+      "img": "assets/images/04-ticketline.png",
+      "title": "Ticketline",
+      "desc": [
+        "Ticketline represents an an entire ticket sales app for cinemas, theatres and other event based institutions.",
+
+        "In this project I led a team of 6 developers and worked as full-stack developer. We successfully delivered the application within 4 months. Although not being XR related, the project was extremely valuable for learning important tools and techniques in software engineering."
+      ],
+      "tags": ["Java", "Java FX", "Hibernate", "H2"]
+    },
+    {
+      "img": "assets/images/07-plumber.jpg",
+      "title": "Plumper Game",
+      "desc": [
+        "In this project me and 4 other developers successfully implemented a matlab prototype for recognizing hand drawn pipes. The application automatically rotates the pipes in order to create a continous path from point A to point B.",
+
+        "Therefore, i applied different computer vision techniques, such as binarization, connected component labeling and bounding boxes."
+      ],
+      "tags": ["Matlab"]
     }
   ]
 }
