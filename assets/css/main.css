@@ -135,6 +135,19 @@ header, .heading {
     .tag {
       font-size: .8rem; } }
 
+.align-left {
+  text-align: left; }
+
+.education {
+  margin: 0;
+  margin-top: 5%; }
+
+.backfont {
+  text-transform: uppercase;
+  letter-spacing: .4rem;
+  font-size: .8rem;
+  color: gray; }
+
 /* General section */
 a:hover {
   transition: all .2s ease-in; }
@@ -206,11 +219,14 @@ section {
     opacity: 0.9;
     border-radius: .3rem; }
 
-.profile {
-  display: block; }
-  .profile img {
-    max-width: 100%;
-    border-radius: 50%; }
+.portrait img {
+  width: 18rem;
+  border-radius: 50%;
+  border: 1rem solid;
+  opacity: 0.9;
+  filter: grayscale(20%);
+  border-color: #393939;
+  margin-bottom: 1rem; }
 
 .button-container {
   display: grid;
@@ -304,12 +320,13 @@ header {
     .tools-container {
       display: grid;
       grid-template-columns: 1fr 1fr; } }
-  .tools-container .tools {
-    padding: 0;
-    text-align: left; }
-    @media only screen and (min-width: 736px) {
-      .tools-container .tools {
-        padding: 0rem 2rem; } }
+
+.tools {
+  padding: 0;
+  text-align: left; }
+  @media only screen and (min-width: 736px) {
+    .tools {
+      padding: 0rem 2rem; } }
 
 /* Project section */
 #projects {
@@ -355,6 +372,9 @@ header {
       .item .desc .p-wrapper p {
         margin: 0;
         padding-bottom: 1rem; }
+
+.container {
+  padding: 3% 0; }
 
 /* Contact section */
 #contact {

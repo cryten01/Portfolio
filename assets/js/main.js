@@ -26,12 +26,19 @@ function addProject(imgSource, title, year, desc, tags) {
   newWrapper.appendChild(newStats);
 
   var developedIn = document.createElement("p");
-  developedIn.textContent = "Developed in: ";
+  developedIn.classList.add("backfont");
+  developedIn.textContent = "Developed in ";
+
   var yearTag = document.createElement("div");
   yearTag.classList.add("tag");
   yearTag.textContent = year;
+
+  var tagContainer = document.createElement("div");
+  tagContainer.classList.add("tags");
+
+  tagContainer.appendChild(yearTag);
   newStats.appendChild(developedIn);
-  newStats.appendChild(yearTag);
+  newStats.appendChild(tagContainer);
 
   for (const value of desc) {
     var temp = document.createElement("p");

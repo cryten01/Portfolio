@@ -39,14 +39,14 @@
         display:grid;
         grid-template-columns: 1fr 1fr;
     }
+}
 
-    .tools {
-        padding: 0;
-        text-align: left;
+.tools {
+    padding: 0;
+    text-align: left;
 
-        @media only screen and (min-width: _media(small)) {
-            padding: 0rem 2rem;
-        }
+    @media only screen and (min-width: _media(small)) {
+        padding: 0rem 2rem;
     }
 }
 
@@ -114,7 +114,9 @@
     }
 }
 
-
+.container {
+    padding: 3% 0;
+}
 
 
 /* Contact section */
