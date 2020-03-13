@@ -3,7 +3,7 @@
     {
       "img": "assets/images/05-wonderland.png",
       "title": "RTR Engine",
-      "year" : 2019,
+      "year" : 2020,
       "desc": [
         "The RTR Engine is a small scope render engine designed for learning different engine concepts. It represents the follow up project for Starman’s Roadtrip to Mars and gets continously expanded with new features.",
 

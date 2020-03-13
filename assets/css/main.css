@@ -125,6 +125,9 @@ header, .heading {
 .stats {
   text-transform: uppercase; }
 
+.tools-container {
+  text-align: left; }
+
 .tag {
   font-size: .7rem;
   text-transform: uppercase; }
@@ -169,7 +172,7 @@ section {
   background: #393939; }
 
 /* Project section */
-.desc .tag {
+.tag {
   border-radius: .3rem;
   border-style: solid;
   border-color: #393939;
@@ -203,9 +206,15 @@ section {
     opacity: 0.9;
     border-radius: .3rem; }
 
+.profile {
+  display: block; }
+  .profile img {
+    max-width: 100%;
+    border-radius: 50%; }
+
 .button-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   margin: .5rem 1rem;
   padding: 0; }
 
@@ -218,6 +227,12 @@ section {
     height: 100%; }
   .button.v1 {
     display: none; }
+
+.tags .tag {
+  padding: .3rem .9rem;
+  margin-right: .8rem;
+  margin-bottom: .8rem;
+  display: inline-flex; }
 
 #wrapper {
   margin: 0rem 3rem 3rem 3rem; }
@@ -240,7 +255,7 @@ header {
   z-index: 1; }
   #nav .v1 {
     display: none; }
-  @media (max-width: 480px) {
+  @media (max-width: 736px) {
     #nav {
       position: relative; }
       #nav .v1 {
@@ -265,15 +280,36 @@ header {
 
 /* About section */
 #about {
-  padding: 12%;
-  min-height: 100vh; }
+  padding: 10% 8% 8% 8%;
+  min-height: 90vh; }
   @media (max-width: 480px) {
     #about {
+      padding: 12% 10%; } }
+
+#tools {
+  padding: 5% 8%;
+  min-height: 90vh; }
+  @media (max-width: 480px) {
+    #tools {
       padding: 12% 10%; } }
 
 .solid-divider {
   margin: 3rem 20%;
   height: 3px; }
+
+.tools-container {
+  padding: 0;
+  display: block; }
+  @media only screen and (min-width: 992px) {
+    .tools-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr; } }
+  .tools-container .tools {
+    padding: 0;
+    text-align: left; }
+    @media only screen and (min-width: 736px) {
+      .tools-container .tools {
+        padding: 0rem 2rem; } }
 
 /* Project section */
 #projects {
@@ -316,19 +352,9 @@ header {
           margin-top: .4rem;
           margin-right: .8rem;
           font-size: .9rem; }
-        .item .desc .p-wrapper .stats .tag {
-          margin-right: 1rem; }
       .item .desc .p-wrapper p {
         margin: 0;
         padding-bottom: 1rem; }
-    .item .desc .tags {
-      position: relative;
-      bottom: 0; }
-    .item .desc .tag {
-      padding: .3rem .9rem;
-      margin-right: .8rem;
-      margin-bottom: .8rem;
-      display: inline-flex; }
 
 /* Contact section */
 #contact {

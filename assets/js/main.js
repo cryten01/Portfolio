@@ -26,7 +26,7 @@ function addProject(imgSource, title, year, desc, tags) {
   newWrapper.appendChild(newStats);
 
   var developedIn = document.createElement("p");
-  developedIn.textContent = "Developed in ";
+  developedIn.textContent = "Developed in: ";
   var yearTag = document.createElement("div");
   yearTag.classList.add("tag");
   yearTag.textContent = year;
