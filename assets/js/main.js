@@ -1,4 +1,4 @@
-function addProject(imgSource, title, desc, tags) {
+function addProject(imgSource, title, year, desc, tags) {
   var projectContainer = document.getElementById("projects");
 
   var newitem = document.createElement("div");
@@ -20,6 +20,18 @@ function addProject(imgSource, title, desc, tags) {
   newHeading.classList.add("heading");
   newHeading.textContent = title;
   newWrapper.appendChild(newHeading);
+
+  var newStats = document.createElement("div");
+  newStats.classList.add("stats");
+  newWrapper.appendChild(newStats);
+
+  var developedIn = document.createElement("p");
+  developedIn.textContent = "Developed in ";
+  var yearTag = document.createElement("div");
+  yearTag.classList.add("tag");
+  yearTag.textContent = year;
+  newStats.appendChild(developedIn);
+  newStats.appendChild(yearTag);
 
   for (const value of desc) {
     var temp = document.createElement("p");
@@ -57,7 +69,7 @@ function loadJSON() {
       var projects = response.projects;
 
       for (const value of projects) {
-        addProject(value.img, value.title, value.desc, value.tags);
+        addProject(value.img, value.title, value.year, value.desc, value.tags);
       }
     }
   };

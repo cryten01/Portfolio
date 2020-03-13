@@ -3,6 +3,7 @@
     {
       "img": "assets/images/05-wonderland.png",
       "title": "RTR Engine",
+      "year" : 2019,
       "desc": [
         "The RTR Engine is a small scope render engine designed for learning different engine concepts. It represents the follow up project for Starman’s Roadtrip to Mars and gets continously expanded with new features.",
 
@@ -13,6 +14,7 @@
     {
       "img": "assets/images/06-molecular.png",
       "title": "Real time molecular dynamics simulation",
+      "year" : 2019,
       "desc": [
         "The goal for this client server application was to effectively simulate molecular structures with constant frame rates over 60 FPS.",
 
@@ -23,6 +25,7 @@
     {
       "img": "assets/images/02-controller.png",
       "title": "Multi-sensoric vr controller",
+      "year" : 2019,
       "desc": [
         "Goal for this research project was to build an alternative controller for VR environments.",
 
@@ -33,6 +36,7 @@
     {
       "img": "assets/images/01-thesis.png",
       "title": "VR 360 Learning App",
+      "year" : 2019,
       "desc": [
         "During my bachelor thesis, I investigated the possibilities of VR 360 for learning and training environments.",
 
@@ -43,6 +47,7 @@
     {
       "img": "assets/images/03-starman.png",
       "title": "Starman's roadtrip to mars",
+      "year" : 2019,
       "desc": [
         "Starman’s Roadtrip To Mars is a fully functional game written in C++ and OpenGL. The idea is dedicated to Elon Musk’s Falcon Heavy Launch which contained a tesla model s with a dummy that should reach mars.",
 
@@ -53,6 +58,7 @@
     {
       "img": "assets/images/08-puzzle.png",
       "title": "VR puzzle game",
+      "year" : 2018,
       "desc": [
         "The goal for this research project was finding efficient ways to extend the game space environment.",
 
@@ -63,6 +69,7 @@
     {
       "img": "assets/images/04-ticketline.png",
       "title": "Ticketline",
+      "year" : 2018,
       "desc": [
         "Ticketline represents an an entire ticket sales app for cinemas, theatres and other event based institutions.",
 
@@ -73,6 +80,7 @@
     {
       "img": "assets/images/07-plumber.jpg",
       "title": "Plumper Game",
+      "year" : 2018,
       "desc": [
         "In this project me and 4 other developers successfully implemented a matlab prototype for recognizing hand drawn pipes. The application automatically rotates the pipes in order to create a continous path from point A to point B.",
 
