@@ -1,152 +1,152 @@
 body {
-    color: _palette(text);
-    font-family: _font(family);
-    font-weight: _font(weight);
-    letter-spacing: _font(letter-spacing);
-    line-height: 1.5;
+  color: _palette(text);
 }
 
-a {
-    color: _palette(text);
-    text-transform: uppercase;
-    text-decoration: none;
+body {
+  font-family: _font(family);
+  font-size: 1rem;
+  font-weight: _font(weight);
+  letter-spacing: _font(letter-spacing);
+  line-height: 1.6;
+
+  @media (max-width: _media(small)) {
+    font-size: 0.9rem;
+  }
+
+  @media (max-width: _media(xsmall)) {
+    font-size: 0.8rem;
+  }
 }
 
+a,
+.tag {
+  color: inherit;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: _font(weight-bold);
+}
+
+strong,
 b {
-    font-weight: bold;
-    font-size: 140%;
+  font-weight: _font(weight-bold);
+  font-size: 130%;
 }
 
 p {
-    text-align: justify;
-    font-size: 80%;
+  text-align: justify;
+}
 
-    @media only screen and (min-width: _media(xsmall)) {
-        font-size: 100%;
-        line-height: 1.6rem;
-    }
-
-    &.copyright {
-        text-align: center;
-        color: _palette(hover);
-        font-size: .7rem;
-    
-        @media only screen and (min-width: _media(xsmall)) {
-            font-size: 1rem;
-        }
-    }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.heading,
+.backfont {
+  font-weight: _font(weight-bold);
+  margin: 0 0 (2rem * 0.35) 0;
+  // letter-spacing: _font(letter-spacing);
 }
 
 h1 {
-    font-size: 10.5vw;
-    line-height: 1.4;
+  $size: 5rem;
+  font-size: 5rem;
 
-    @media only screen and (min-width: _media(xsmall)) {
-        font-size: 3.5rem;
-    }
+  @media (max-width: _media(small)) {
+    font-size: $size * 0.7;
+  }
 
-    @media only screen and (min-width: _media(small)) {
-        font-size: 5rem;
-    }
+  @media (max-width: _media(xsmall)) {
+    font-size: $size * 0.5;
+  }
 }
 
 h3 {
-    font-size: 1.0rem;
+  $size: 2rem;
+  font-size: $size;
 
-    @media only screen and (min-width: _media(xsmall)) {
-        font-size: 1.4rem;
-    }
+  @media (max-width: _media(small)) {
+    font-size: $size * 0.7;
+  }
 
-    @media only screen and (min-width: _media(small)) {
-        font-size: 2rem;
-    }
+  @media (max-width: _media(xsmall)) {
+    font-size: $size * 0.5;
+  }
 }
 
 h4 {
-    font-size: 1.0rem;  
+  $size: 1.5rem;
+  font-size: $size;
 
-    @media only screen and (min-width: _media(xsmall)) {
-        font-size: 1.2rem;  
-    }
+  @media (max-width: _media(small)) {
+    font-size: $size * 0.7;
+  }
 
-    @media only screen and (min-width: _media(small)) {
-        font-size: 1.4rem;
-    }
+  @media (max-width: _media(xsmall)) {
+    font-size: $size * 0.5;
+  }
 }
 
 .cinematic {
-    letter-spacing: .4rem;
-    line-height: 1.8em;
-    text-transform: uppercase;
-    text-align: center;
-    background: _palette(text);
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
+  letter-spacing: 0.5rem;
+  text-transform: uppercase;
+  text-align: center;
+}
 
-
-    font-size: .7rem;
-
-    @media only screen and (min-width: _media(xsmall)) {
-        font-size: .8rem;
-    }
-
-    @media only screen and (min-width: _media(small)) {
-        font-size: 1rem;
-    }
+header,
+.heading {
+  @include gradient-text();
 }
 
 .heading {
-    padding-top: 2rem;
-    font-size: 1.24rem;
-    word-wrap: break-word;
+  $size: 1.7rem;
+  font-size: $size;
+  word-wrap: break-word;
 
-    @media only screen and (min-width: _media(xsmall)) {
-        font-size: 1.8rem; 
-        text-align: left;
-    }
-}
+  @media (max-width: _media(small)) {
+    font-size: $size * 0.9;
+  }
 
-header, .heading {
-    @include gradient-text();
-}
-
-
-#nav ul, #about, #contact {
-    text-align: center;
-}
-
-.stats {
-    text-transform: uppercase;
-}
-
-.tools-container {
-    
-    text-align: left;
+  @media (max-width: _media(xsmall)) {
+    font-size: $size * 0.8;
+  }
 }
 
 .tag {
-    font-size: .7rem;
+  $size: 0.8rem;
+  font-size: $size;
 
-    text-transform: uppercase;
+  @media (max-width: _media(xsmall)) {
+    font-size: $size * 0.9;
+  }
+}
 
-    @media only screen and (min-width: _media(xsmall)) {
-        font-size: .8rem;
-    }
+#nav ul,
+#about,
+#contact,
+.copyright {
+  text-align: center;
 }
 
 .align-left {
-    text-align: left;
-}
-
-.education {
-    // padding: 0;
-    margin: 0;
-        margin-top: 5%;
+  text-align: left;
 }
 
 .backfont {
-    text-transform: uppercase;
-    letter-spacing: .4rem;
-    font-size: .8rem;
-    color: gray;
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+  font-size: .8rem;
+  color: _palette(backtext);
+}
+
+.copyright {
+  color: _palette(hover);
+  
+  $size: 1rem;
+  font-size: 0.7rem;
+
+  @media (max-width: _media(xsmall)) {
+    font-size: $size * 0.7;
+  }
 }

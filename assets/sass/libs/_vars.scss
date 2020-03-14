@@ -7,6 +7,7 @@ $palette: (
     nav:        lighten($primary-color, 12),
     button:     lighten($primary-color, 18),
     hover:      lighten($primary-color, 24),
+    backtext:   lighten($primary-color, 28),
     text:       rgb(233, 233, 233),
     gradient:   -webkit-linear-gradient(red, yellow)
 );
@@ -16,7 +17,7 @@ $font: (
     family:				('Spartan', sans-serif),
     family-fixed:		('Courier New', monospace),
     weight:				300,
-    weight-bold:		700,
+    weight-bold:		500,
     letter-spacing:		.1rem
 );
 
