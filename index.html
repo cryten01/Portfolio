@@ -7,6 +7,10 @@
       name="viewport"
       content="width=device-width, initial-scale=1, user-scalable=no"
     />
+    <meta http-equiv="Content-Security-Policy" content="default-src *;
+    img-src * 'self' data: https: http:;
+    script-src 'self' 'unsafe-inline' 'unsafe-eval' *;
+    style-src  'self' 'unsafe-inline' *">
     <link rel="stylesheet" type="text/css" href="assets/css/main.css" />
   </head>
   <body>
@@ -170,7 +174,7 @@
         <div id="contact-point" class="scroll-point"></div>
         <section id="contact">
           <div class="portrait">
-            <!-- <img src="assets/images/09-portrait.jpg" alt="" /> -->
+            <img src="assets/images/09-portrait.jpg" alt="" />
           </div>
           <div class="paragraphs">
             <p class="cinematic">Curious about XR?</p>
