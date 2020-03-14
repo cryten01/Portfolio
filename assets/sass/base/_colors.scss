@@ -7,13 +7,7 @@ a {
 }
 
 section {
-  @include border();
-  padding: 2rem;
   background: _palette(section);
-
-  & p {
-    margin: 0;
-  }
 }
 
 /* Navigation section */

@@ -13,12 +13,14 @@
 
 .portrait {
 
+  border-radius: 50%;
+  display: inline-block;
+
   img {
     width: 18rem;
     border-radius: 50%;
     border: 1rem solid;
     opacity: 0.9;
-    filter: grayscale(20%);
     border-color: _palette(nav);
     margin-bottom: 1rem;
   }

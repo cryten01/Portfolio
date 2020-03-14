@@ -14,19 +14,6 @@
   height: 3px;
 }
 
-#tools {
-  // display: flex;
-  // flex-direction: column;
-  // align-items: center;
-
-  padding: 5% 8%;
-  min-height: 90vh;
-
-  @media (max-width: _media(xsmall)) {
-    padding: 12% 10%;
-  }
-}
-
 /* Project section */
 
 #projects {
@@ -79,9 +66,23 @@
 
 /* Skills section */
 
+.container {
+  .cinematic {
+    padding: 4%;
+  }
+}
+
 .tools-container {
   padding: 0;
-  display: block;
+  display: grid;
+
+  .tools {
+    padding: 2% 10%;
+
+    @media (max-width: _media(xsmall)) {
+      padding: 10% 6%;
+    }
+  }
 
   @media only screen and (min-width: _media(medium)) {
     display: grid;
@@ -89,7 +90,7 @@
   }
 }
 
-.tools {
+.skills {
   padding: 0;
   text-align: left;
 
@@ -98,30 +99,20 @@
   }
 }
 
-.container {
-  padding: 3% 0;
-}
-
 /* Contact section */
 
 #contact {
-  padding: 5%;
+  .paragraphs {
+    padding-bottom: 2rem;
+  }
 
-  & a {
+  .icon {
     display: inline-block;
     margin: 0rem 1rem;
     padding: 0.9rem;
   }
 
-  & .contact-wrapper {
-    padding-top: 2rem;
-  }
-
-  & p {
-    margin: 0.5rem 0rem;
-  }
-
   @media (max-width: _media(xsmall)) {
-    padding: 5% 12%;
+    padding: 12% 12%;
   }
 }

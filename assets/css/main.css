@@ -152,14 +152,7 @@ a:hover {
   transition: all .2s ease-in; }
 
 section {
-  border-radius: .3rem;
-  border-style: solid;
-  border-color: #393939;
-  border-width: thin;
-  padding: 2rem;
   background: #292929; }
-  section p {
-    margin: 0; }
 
 /* Navigation section */
 #nav {
@@ -214,14 +207,16 @@ section {
     opacity: 0.9;
     border-radius: .3rem; }
 
-.portrait img {
-  width: 18rem;
+.portrait {
   border-radius: 50%;
-  border: 1rem solid;
-  opacity: 0.9;
-  filter: grayscale(20%);
-  border-color: #393939;
-  margin-bottom: 1rem; }
+  display: inline-block; }
+  .portrait img {
+    width: 18rem;
+    border-radius: 50%;
+    border: 1rem solid;
+    opacity: 0.9;
+    border-color: #393939;
+    margin-bottom: 1rem; }
 
 .button-container {
   display: grid;
@@ -255,6 +250,15 @@ section {
   .stats p {
     margin-right: 1rem; }
 
+section {
+  border-radius: .3rem;
+  border-style: solid;
+  border-color: #393939;
+  border-width: thin;
+  padding: 2rem; }
+
+/* Header */
+/* Footer */
 #wrapper {
   margin: 0rem 3rem 3rem 3rem; }
   @media (max-width: 480px) {
@@ -306,13 +310,6 @@ header {
   margin: 6% 20%;
   height: 3px; }
 
-#tools {
-  padding: 5% 8%;
-  min-height: 90vh; }
-  @media (max-width: 480px) {
-    #tools {
-      padding: 12% 10%; } }
-
 /* Project section */
 #projects {
   display: grid;
@@ -350,38 +347,41 @@ header {
     padding-bottom: 1rem; }
 
 /* Skills section */
+.container .cinematic {
+  padding: 4%; }
+
 .tools-container {
   padding: 0;
-  display: block; }
+  display: grid; }
+  .tools-container .tools {
+    padding: 2% 10%; }
+    @media (max-width: 480px) {
+      .tools-container .tools {
+        padding: 10% 6%; } }
   @media only screen and (min-width: 992px) {
     .tools-container {
       display: grid;
       grid-template-columns: 1fr 1fr; } }
 
-.tools {
+.skills {
   padding: 0;
   text-align: left; }
   @media only screen and (min-width: 736px) {
-    .tools {
+    .skills {
       padding: 0rem 2rem; } }
 
-.container {
-  padding: 3% 0; }
-
 /* Contact section */
-#contact {
-  padding: 5%; }
-  #contact a {
-    display: inline-block;
-    margin: 0rem 1rem;
-    padding: 0.9rem; }
-  #contact .contact-wrapper {
-    padding-top: 2rem; }
-  #contact p {
-    margin: 0.5rem 0rem; }
-  @media (max-width: 480px) {
-    #contact {
-      padding: 5% 12%; } }
+#contact .paragraphs {
+  padding-bottom: 2rem; }
+
+#contact .icon {
+  display: inline-block;
+  margin: 0rem 1rem;
+  padding: 0.9rem; }
+
+@media (max-width: 480px) {
+  #contact {
+    padding: 12% 12%; } }
 
 footer {
   display: flexbox;
