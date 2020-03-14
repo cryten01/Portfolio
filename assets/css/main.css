@@ -301,7 +301,7 @@ header {
 /* About section */
 #about,
 #skills {
-  padding: 6%;
+  padding: 7%;
   min-height: 90vh; }
   @media (max-width: 736px) {
     #about,
@@ -329,7 +329,8 @@ header {
   grid-gap: 1rem; }
   @media (max-width: 992px) {
     .item {
-      display: block;
+      display: flex;
+      flex-direction: column;
       padding-bottom: 1.6rem; } }
 
 .item-container {

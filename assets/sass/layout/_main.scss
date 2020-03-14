@@ -2,7 +2,7 @@
 
 #about,
 #skills {
-  padding: 6%;
+  padding: 7%;
   min-height: 90vh;
 
   @media (max-width: _media(small)) {
@@ -37,7 +37,8 @@
   grid-gap: 1rem;
 
   @media (max-width: _media(medium)) {
-    display: block;
+    display: flex;
+    flex-direction: column;
     padding-bottom: 1.6rem;
   }
 }
