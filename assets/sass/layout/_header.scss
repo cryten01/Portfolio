@@ -1,5 +1,9 @@
 header {
-    display: flex;
-    align-items: center;
-    height: 90vh;
+  display: flex;
+  align-items: center;
+  height: 90vh;
+
+  @media (max-width: _media(xsmall)) {
+    padding-left: 8%;
+  }
 }

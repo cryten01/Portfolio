@@ -10,7 +10,6 @@ body {
   background-attachment: fixed;
   background-size: cover;
   background-position: 40% 0%;
-  height: 100%;
   margin: 0; }
   body:after {
     content: '';
@@ -138,7 +137,7 @@ header,
 .backfont {
   text-transform: uppercase;
   letter-spacing: 0.3rem;
-  font-size: .8rem;
+  font-size: 0.8rem;
   color: #616161; }
 
 .copyright {
@@ -207,10 +206,6 @@ section {
   border-style: solid;
   border-color: #393939;
   border-width: thin;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 1.8rem;
   background: #1a1a1a; }
   .img img {
     width: 100%;
@@ -231,18 +226,21 @@ section {
 .button-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  margin: .5rem 1rem;
+  margin: 0.5rem 1rem;
   padding: 0; }
+  @media (max-width: 736px) {
+    .button-container {
+      display: block; }
+      .button-container li {
+        padding: 0; } }
 
 .button {
-  margin: 0rem .4rem;
-  padding: .9rem 0rem; }
+  margin: 0rem 0.4rem;
+  padding: 0.9rem 0rem; }
   .button a {
     display: inline-block;
     width: 100%;
     height: 100%; }
-  .button.v1 {
-    display: none; }
 
 .tags .tag {
   padding: .3rem .9rem;
@@ -250,20 +248,26 @@ section {
   margin-bottom: .8rem;
   display: inline-flex; }
 
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center; }
+  .stats p {
+    margin-right: 1rem; }
+
 #wrapper {
   margin: 0rem 3rem 3rem 3rem; }
   @media (max-width: 480px) {
     #wrapper {
-      margin: 0; }
-      #wrapper header {
-        padding-left: 10%; }
-      #wrapper #nav ul li {
-        margin: 0 5%; } }
+      margin: 0; } }
 
 header {
   display: flex;
   align-items: center;
   height: 90vh; }
+  @media (max-width: 480px) {
+    header {
+      padding-left: 8%; } }
 
 #nav {
   position: sticky;
@@ -277,17 +281,13 @@ header {
       #nav .v1 {
         display: block; }
       #nav .v2 {
-        display: none; }
-      #nav ul {
-        display: block; }
-        #nav ul li {
-          padding: 0; } }
+        display: none; } }
 
 .back-to-top {
-  display: block; }
-  @media only screen and (min-width: 480px) {
+  display: none; }
+  @media (max-width: 480px) {
     .back-to-top {
-      display: none; } }
+      display: block; } }
 
 /* Scroll points */
 .scroll-point {
@@ -302,6 +302,10 @@ header {
     #about {
       padding: 12% 10%; } }
 
+.solid-divider {
+  margin: 6% 20%;
+  height: 3px; }
+
 #tools {
   padding: 5% 8%;
   min-height: 90vh; }
@@ -309,10 +313,43 @@ header {
     #tools {
       padding: 12% 10%; } }
 
-.solid-divider {
-  margin: 3rem 20%;
-  height: 3px; }
+/* Project section */
+#projects {
+  display: grid;
+  grid-gap: 4rem; }
+  @media (max-width: 736px) {
+    #projects {
+      display: block; } }
 
+.item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem; }
+  @media (max-width: 992px) {
+    .item {
+      display: block;
+      padding-bottom: 1.6rem; } }
+
+.item-container {
+  min-width: 50%;
+  display: block;
+  margin: 0.8rem 1rem; }
+  @media (max-width: 992px) {
+    .item-container {
+      height: auto;
+      padding: 0; } }
+
+.desc {
+  padding: 2% 0% 2% 2%; }
+  @media (max-width: 736px) {
+    .desc {
+      padding: 2%; } }
+  .desc .p-wrapper .heading {
+    max-width: 100%; }
+  .desc .p-wrapper p {
+    padding-bottom: 1rem; }
+
+/* Skills section */
 .tools-container {
   padding: 0;
   display: block; }
@@ -328,51 +365,6 @@ header {
     .tools {
       padding: 0rem 2rem; } }
 
-/* Project section */
-#projects {
-  display: grid;
-  grid-template-rows: 1fr 1fr;
-  grid-gap: 4rem; }
-  @media (max-width: 736px) {
-    #projects {
-      display: block; } }
-
-.item {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 1rem; }
-  @media (max-width: 992px) {
-    .item {
-      display: block;
-      padding-bottom: 4rem; } }
-  .item .desc {
-    min-width: 50%;
-    display: block;
-    padding: 1rem 1.6rem; }
-    @media (max-width: 992px) {
-      .item .desc {
-        height: auto;
-        padding: 0; } }
-    .item .desc .p-wrapper {
-      padding-bottom: .8rem; }
-      .item .desc .p-wrapper .heading {
-        display: block;
-        max-width: 100%;
-        margin: 0;
-        padding: 0; }
-      .item .desc .p-wrapper .stats {
-        display: inline-flex;
-        flex-wrap: wrap;
-        align-items: center;
-        padding: .8rem 0rem; }
-        .item .desc .p-wrapper .stats p {
-          margin-top: .4rem;
-          margin-right: .8rem;
-          font-size: .9rem; }
-      .item .desc .p-wrapper p {
-        margin: 0;
-        padding-bottom: 1rem; }
-
 .container {
   padding: 3% 0; }
 
@@ -382,11 +374,11 @@ header {
   #contact a {
     display: inline-block;
     margin: 0rem 1rem;
-    padding: .9rem; }
+    padding: 0.9rem; }
   #contact .contact-wrapper {
     padding-top: 2rem; }
   #contact p {
-    margin: .5rem 0rem; }
+    margin: 0.5rem 0rem; }
   @media (max-width: 480px) {
     #contact {
       padding: 5% 12%; } }

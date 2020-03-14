@@ -136,13 +136,13 @@ header,
 .backfont {
   text-transform: uppercase;
   letter-spacing: 0.3rem;
-  font-size: .8rem;
+  font-size: 0.8rem;
   color: _palette(backtext);
 }
 
 .copyright {
   color: _palette(hover);
-  
+
   $size: 1rem;
   font-size: 0.7rem;
 

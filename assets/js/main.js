@@ -3,42 +3,56 @@ function addProject(imgSource, title, year, desc, tags) {
 
   var newitem = document.createElement("div");
   newitem.classList.add("item");
+  projectContainer.appendChild(newitem);
+
 
   var newImg = document.createElement("div");
   newImg.classList.add("img");
+  newImg.classList.add("item-container");
+  newitem.appendChild(newImg);
 
   var img = document.createElement("img");
   img.src = imgSource;
+  newImg.appendChild(img);
+
+
+
 
   var newDesc = document.createElement("div");
   newDesc.classList.add("desc");
-
-  var newWrapper = document.createElement("div");
-  newWrapper.classList.add("p-wrapper");
+  newDesc.classList.add("item-container");
+  newitem.appendChild(newDesc);
 
   var newHeading = document.createElement("h3");
   newHeading.classList.add("heading");
   newHeading.textContent = title;
-  newWrapper.appendChild(newHeading);
+  newDesc.appendChild(newHeading);
+
+
 
   var newStats = document.createElement("div");
   newStats.classList.add("stats");
-  newWrapper.appendChild(newStats);
+  newDesc.appendChild(newStats);
 
   var developedIn = document.createElement("p");
   developedIn.classList.add("backfont");
   developedIn.textContent = "Developed in ";
+  newStats.appendChild(developedIn);
+
+  var tagContainer = document.createElement("div");
+  tagContainer.classList.add("tags")
+  newStats.appendChild(tagContainer);
 
   var yearTag = document.createElement("div");
   yearTag.classList.add("tag");
   yearTag.textContent = year;
-
-  var tagContainer = document.createElement("div");
-  tagContainer.classList.add("tags");
-
   tagContainer.appendChild(yearTag);
-  newStats.appendChild(developedIn);
-  newStats.appendChild(tagContainer);
+
+
+  
+  var newWrapper = document.createElement("div");
+  newWrapper.classList.add("p-wrapper");
+  newDesc.appendChild(newWrapper);
 
   for (const value of desc) {
     var temp = document.createElement("p");
@@ -46,8 +60,11 @@ function addProject(imgSource, title, year, desc, tags) {
     newWrapper.appendChild(temp);
   }
 
+
+
   var newTagList = document.createElement("div");
   newTagList.classList.add("tags");
+  newDesc.appendChild(newTagList);
 
   for (const value of tags) {
     var temp = document.createElement("div");
@@ -55,14 +72,6 @@ function addProject(imgSource, title, year, desc, tags) {
     temp.textContent = value;
     newTagList.appendChild(temp);
   }
-
-  newImg.appendChild(img);
-  newitem.appendChild(newImg);
-
-  newDesc.appendChild(newWrapper);
-  newDesc.appendChild(newTagList);
-  newitem.appendChild(newDesc);
-  projectContainer.appendChild(newitem);
 }
 
 function loadJSON() {

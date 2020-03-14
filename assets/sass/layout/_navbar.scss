@@ -1,45 +1,36 @@
 #nav {
-    position: sticky;
-    top: 0;
-    z-index: 1;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+
+  .v1 {
+    display: none;
+  }
+
+  @media (max-width: _media(small)) {
+    position: relative;
 
     .v1 {
-        display: none;
+      display: block;
     }
 
-    @media(max-width: _media(small)) {
-    
-        position: relative;
-
-        .v1 {
-            display: block;
-        }
-
-        .v2 {
-            display: none;
-        }
-
-        ul {
-            display: block;
-
-            li {
-                padding: 0;
-            }
-        }
+    .v2 {
+      display: none;
     }
+  }
 }
 
 .back-to-top {
-    display: block;
+  display: none;
 
-    @media only screen and (min-width: _media(xsmall)) {
-        display: none;
-    }
+  @media (max-width: _media(xsmall)) {
+    display: block;
+  }
 }
 
 /* Scroll points */
 
 .scroll-point {
-    position: relative; 
-    top: -4.5rem;
+  position: relative;
+  top: -4.5rem;
 }

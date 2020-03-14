@@ -1,144 +1,127 @@
 /* About section */
 
-#about{
-    // display: flex;
-    // align-items: center;
+#about {
+  padding: 10% 8% 8% 8%;
+  min-height: 90vh;
 
-    padding: 10% 8% 8% 8%;
-    min-height: 90vh;
-
-    @media(max-width: _media(xsmall)) {
-        padding: 12% 10%
-    }
-}
-
-#tools{
-    // display: flex;
-    // flex-direction: column;
-    // align-items: center;
-    
-    padding: 5% 8%;
-    min-height: 90vh;
-
-    @media(max-width: _media(xsmall)) {
-        padding: 12% 10%
-    }
+  @media (max-width: _media(xsmall)) {
+    padding: 12% 10%;
+  }
 }
 
 .solid-divider {
-    margin: 3rem 20%;    
-    height: 3px;
+  margin: 6% 20%;
+  height: 3px;
 }
 
-.tools-container {
+#tools {
+  // display: flex;
+  // flex-direction: column;
+  // align-items: center;
 
-    padding: 0;
-    display: block;
+  padding: 5% 8%;
+  min-height: 90vh;
 
-    @media only screen and (min-width: _media(medium)) {
-        display:grid;
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
-.tools {
-    padding: 0;
-    text-align: left;
-
-    @media only screen and (min-width: _media(small)) {
-        padding: 0rem 2rem;
-    }
+  @media (max-width: _media(xsmall)) {
+    padding: 12% 10%;
+  }
 }
 
 /* Project section */
 
 #projects {
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    grid-gap: 4rem;
+  display: grid;
+  grid-gap: 4rem;
 
-    @media(max-width: _media(small)) {
-        display: block;
-    }
+  @media (max-width: _media(small)) {
+    display: block;
+  }
 }
 
 .item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
+
+  @media (max-width: _media(medium)) {
+    display: block;
+    padding-bottom: 1.6rem;
+  }
+}
+
+.item-container {
+  min-width: 50%;
+  display: block;
+  margin: 0.8rem 1rem;
+
+  @media (max-width: _media(medium)) {
+    height: auto;
+    padding: 0;
+  }
+}
+
+.desc {
+  padding: 2% 0% 2% 2%;
+
+  @media (max-width: _media(small)) {
+    padding: 2%;
+  }
+
+  .p-wrapper {
+    .heading {
+      max-width: 100%;
+    }
+    p {
+      padding-bottom: 1rem;
+    }
+  }
+}
+
+/* Skills section */
+
+.tools-container {
+  padding: 0;
+  display: block;
+
+  @media only screen and (min-width: _media(medium)) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 1rem;
+  }
+}
 
-    @media(max-width: _media(medium)) {
-        display: block;
-        padding-bottom: 4rem;
-    }
+.tools {
+  padding: 0;
+  text-align: left;
 
-    .desc {
-        min-width: 50%;
-        display: block;
-        padding: 1rem 1.6rem;
-    
-        @media(max-width: _media(medium)) {
-            height: auto;
-            padding: 0;
-        }
-    
-        .p-wrapper {
-            padding-bottom: .8rem;
-    
-            .heading {
-                display: block;
-                max-width: 100%;
-
-                margin: 0;
-                padding: 0;
-            }
-
-            .stats {
-                display: inline-flex;
-                flex-wrap: wrap;
-                align-items: center;
-                padding: .8rem 0rem;
-                
-                p {
-                    margin-top: .4rem;
-                    margin-right: .8rem;
-                    font-size: .9rem;
-                }
-            }
-    
-            p {
-                margin: 0;
-                padding-bottom: 1rem;
-            }
-        }
-    }
+  @media only screen and (min-width: _media(small)) {
+    padding: 0rem 2rem;
+  }
 }
 
 .container {
-    padding: 3% 0;
+  padding: 3% 0;
 }
-
 
 /* Contact section */
 
 #contact {
-    padding: 5%;
+  padding: 5%;
 
-    & a {
-        display: inline-block;
-        margin: 0rem 1rem;
-        padding: .9rem;
-    }
+  & a {
+    display: inline-block;
+    margin: 0rem 1rem;
+    padding: 0.9rem;
+  }
 
-    & .contact-wrapper {
-        padding-top: 2rem;
-    }
+  & .contact-wrapper {
+    padding-top: 2rem;
+  }
 
-    & p {  
-        margin: .5rem 0rem;
-    }
+  & p {
+    margin: 0.5rem 0rem;
+  }
 
-    @media(max-width: _media(xsmall)) {
-        padding: 5% 12%;
-    }
+  @media (max-width: _media(xsmall)) {
+    padding: 5% 12%;
+  }
 }

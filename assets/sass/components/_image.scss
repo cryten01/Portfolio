@@ -1,14 +1,6 @@
 .img {
   @include border();
-
-  display: flex; 
-  justify-content: center; 
-  align-items: center;
-  margin-bottom: 1.8rem;
   background: _palette(primary);
-
-  // display: inline-block;
-  // height: 30rem;
 
   img {
     width: 100%;
