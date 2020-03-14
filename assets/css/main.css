@@ -299,16 +299,21 @@ header {
   top: -4.5rem; }
 
 /* About section */
-#about {
-  padding: 10% 8% 8% 8%;
+#about,
+#skills {
+  padding: 6%;
   min-height: 90vh; }
-  @media (max-width: 480px) {
-    #about {
-      padding: 12% 10%; } }
+  @media (max-width: 736px) {
+    #about,
+    #skills {
+      padding: 6% 8%; } }
 
 .solid-divider {
   margin: 6% 20%;
   height: 3px; }
+  @media (max-width: 736px) {
+    .solid-divider {
+      margin: 12% 20%; } }
 
 /* Project section */
 #projects {
@@ -347,28 +352,15 @@ header {
     padding-bottom: 1rem; }
 
 /* Skills section */
-.container .cinematic {
-  padding: 4%; }
-
 .tools-container {
-  padding: 0;
-  display: grid; }
-  .tools-container .tools {
-    padding: 2% 10%; }
-    @media (max-width: 480px) {
-      .tools-container .tools {
-        padding: 10% 6%; } }
+  display: grid;
+  grid-gap: 1rem; }
   @media only screen and (min-width: 992px) {
     .tools-container {
-      display: grid;
       grid-template-columns: 1fr 1fr; } }
 
-.skills {
-  padding: 0;
-  text-align: left; }
-  @media only screen and (min-width: 736px) {
-    .skills {
-      padding: 0rem 2rem; } }
+.tools {
+  padding-top: 4rem; }
 
 /* Contact section */
 #contact .paragraphs {

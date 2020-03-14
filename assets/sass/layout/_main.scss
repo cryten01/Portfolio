@@ -1,16 +1,22 @@
 /* About section */
 
-#about {
-  padding: 10% 8% 8% 8%;
+#about,
+#skills {
+  padding: 6%;
   min-height: 90vh;
 
-  @media (max-width: _media(xsmall)) {
-    padding: 12% 10%;
+  @media (max-width: _media(small)) {
+    padding: 6% 8%;
   }
 }
 
 .solid-divider {
   margin: 6% 20%;
+
+  @media (max-width: _media(small)) {
+    margin: 12% 20%;
+  }
+
   height: 3px;
 }
 
@@ -66,37 +72,17 @@
 
 /* Skills section */
 
-.container {
-  .cinematic {
-    padding: 4%;
-  }
-}
-
 .tools-container {
-  padding: 0;
   display: grid;
-
-  .tools {
-    padding: 2% 10%;
-
-    @media (max-width: _media(xsmall)) {
-      padding: 10% 6%;
-    }
-  }
+  grid-gap: 1rem;
 
   @media only screen and (min-width: _media(medium)) {
-    display: grid;
     grid-template-columns: 1fr 1fr;
   }
 }
 
-.skills {
-  padding: 0;
-  text-align: left;
-
-  @media only screen and (min-width: _media(small)) {
-    padding: 0rem 2rem;
-  }
+.tools {
+  padding-top: 4rem;
 }
 
 /* Contact section */
