@@ -6,7 +6,7 @@
   box-sizing: border-box; }
 
 body {
-  background: url(../images/abstract.jpg);
+  background: url(../images/00-abstract.jpg);
   background-attachment: fixed;
   background-size: cover;
   background-position: 40% 0%;
@@ -109,7 +109,7 @@ h4 {
   word-wrap: break-word; }
   @media only screen and (min-width: 480px) {
     .heading {
-      font-size: 2rem;
+      font-size: 1.8rem;
       text-align: left; } }
 
 header, .heading {
@@ -331,7 +331,7 @@ header {
 /* Project section */
 #projects {
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
   grid-gap: 4rem; }
   @media (max-width: 736px) {
     #projects {

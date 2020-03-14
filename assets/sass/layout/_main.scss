@@ -54,7 +54,7 @@
 
 #projects {
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     grid-gap: 4rem;
 
     @media(max-width: _media(small)) {

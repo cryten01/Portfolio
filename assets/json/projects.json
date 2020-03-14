@@ -13,7 +13,7 @@
     },
     {
       "img": "assets/images/06-molecular.png",
-      "title": "Real time molecular dynamics simulation",
+      "title": "Molecular dynamics simulation",
       "year" : 2019,
       "desc": [
         "The goal for this client server application was to effectively simulate molecular structures with constant frame rates over 60 FPS.",
@@ -78,7 +78,7 @@
       "tags": ["Java", "Java FX", "Hibernate", "H2"]
     },
     {
-      "img": "assets/images/07-plumber.jpg",
+      "img": "assets/images/07-plumber.png",
       "title": "Plumper Game",
       "year" : 2018,
       "desc": [
