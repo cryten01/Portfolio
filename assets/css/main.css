@@ -200,7 +200,7 @@ section {
   border-color: #393939;
   border-width: thin;
   background: #1a1a1a;
-  display: flex; }
+  margin-bottom: 1.2rem; }
   .img img {
     width: 100%;
     height: 100%;
@@ -325,11 +325,10 @@ header {
 
 .item {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 1rem; }
+  grid-template-columns: 1fr 1fr; }
   @media (max-width: 992px) {
     .item {
-      display: flex;
+      display: inline-flex;
       flex-direction: column;
       padding-bottom: 2.6rem; } }
 
@@ -337,15 +336,10 @@ header {
   min-width: 50%;
   display: inline-flex;
   flex-direction: column; }
-  @media (max-width: 992px) {
-    .item-container {
-      height: auto;
-      padding: 0;
-      margin: 0; } }
 
 .desc {
   padding: 2% 0% 2% 6%; }
-  @media (max-width: 736px) {
+  @media (max-width: 992px) {
     .desc {
       padding: 0; } }
   .desc .p-wrapper .heading {

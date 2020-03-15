@@ -1,8 +1,7 @@
 .img {
   @include border();
   background: _palette(primary);
-
-  display: flex;
+  margin-bottom: 1.2rem;
 
   img {
     width: 100%;
