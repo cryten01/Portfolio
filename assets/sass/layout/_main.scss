@@ -2,12 +2,12 @@
 
 #about,
 #skills {
-  padding: 7%;
+  // padding: 7%;
   min-height: 90vh;
 
-  @media (max-width: _media(small)) {
-    padding: 6% 8%;
-  }
+  // @media (max-width: _media(small)) {
+  //   padding: 6% 8%;
+  // }
 }
 
 .solid-divider {
@@ -46,19 +46,19 @@
 .item-container {
   min-width: 50%;
   display: block;
-  margin: 0.8rem 1rem;
 
   @media (max-width: _media(medium)) {
     height: auto;
     padding: 0;
+    margin:0;
   }
 }
 
 .desc {
-  padding: 2% 0% 2% 2%;
+  padding: 2% 0% 2% 6%;
 
   @media (max-width: _media(small)) {
-    padding: 2%;
+    padding: 0;
   }
 
   .p-wrapper {
@@ -99,7 +99,7 @@
     padding: 0.9rem;
   }
 
-  @media (max-width: _media(xsmall)) {
-    padding: 12% 12%;
-  }
+  // @media (max-width: _media(xsmall)) {
+  //   padding: 12% 12%;
+  // }
 }

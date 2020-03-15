@@ -101,11 +101,11 @@ h4 {
   text-transform: uppercase;
   text-align: center; }
 
-header,
+.header-container,
 .heading {
   text-transform: uppercase;
   letter-spacing: .6rem;
-  background: -webkit-linear-gradient(red, yellow);
+  background: -webkit-linear-gradient(#FF430A, #FFBB0A);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent; }
 
@@ -117,7 +117,7 @@ header,
       font-size: 1.53rem; } }
   @media (max-width: 480px) {
     .heading {
-      font-size: 1.36rem; } }
+      font-size: 1.292rem; } }
 
 .tag {
   font-size: 0.8rem; }
@@ -255,10 +255,11 @@ section {
   border-style: solid;
   border-color: #393939;
   border-width: thin;
-  padding: 2rem; }
+  padding: 4rem; }
+  @media (max-width: 736px) {
+    section {
+      padding: 2rem 3rem; } }
 
-/* Header */
-/* Footer */
 #wrapper {
   margin: 0rem 3rem 3rem 3rem; }
   @media (max-width: 480px) {
@@ -269,9 +270,11 @@ header {
   display: flex;
   align-items: center;
   height: 90vh; }
+  header .header-container {
+    height: auto; }
   @media (max-width: 480px) {
     header {
-      padding-left: 8%; } }
+      padding-left: 1.8rem; } }
 
 #nav {
   position: sticky;
@@ -301,12 +304,7 @@ header {
 /* About section */
 #about,
 #skills {
-  padding: 7%;
   min-height: 90vh; }
-  @media (max-width: 736px) {
-    #about,
-    #skills {
-      padding: 6% 8%; } }
 
 .solid-divider {
   margin: 6% 20%;
@@ -335,18 +333,18 @@ header {
 
 .item-container {
   min-width: 50%;
-  display: block;
-  margin: 0.8rem 1rem; }
+  display: block; }
   @media (max-width: 992px) {
     .item-container {
       height: auto;
-      padding: 0; } }
+      padding: 0;
+      margin: 0; } }
 
 .desc {
-  padding: 2% 0% 2% 2%; }
+  padding: 2% 0% 2% 6%; }
   @media (max-width: 736px) {
     .desc {
-      padding: 2%; } }
+      padding: 0; } }
   .desc .p-wrapper .heading {
     max-width: 100%; }
   .desc .p-wrapper p {
@@ -371,10 +369,6 @@ header {
   display: inline-block;
   margin: 0rem 1rem;
   padding: 0.9rem; }
-
-@media (max-width: 480px) {
-  #contact {
-    padding: 12% 12%; } }
 
 footer {
   display: flexbox;
