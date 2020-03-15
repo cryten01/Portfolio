@@ -39,13 +39,14 @@
   @media (max-width: _media(medium)) {
     display: flex;
     flex-direction: column;
-    padding-bottom: 1.6rem;
+    padding-bottom: 2.6rem;
   }
 }
 
 .item-container {
   min-width: 50%;
-  display: block;
+  display: inline-flex;
+  flex-direction: column;
 
   @media (max-width: _media(medium)) {
     height: auto;

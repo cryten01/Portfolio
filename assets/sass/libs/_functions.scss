@@ -38,7 +38,7 @@
 }
 
 /// Gets the correct viewport height from javascript
-/// @param {number} $vh Height in vh units.
-@function _vh($vh) {
-	@return calc(var(--vh, 1vh) * #{$vh});
+/// @param {number} $barheight height of the nav bar in rem.
+@function _vh($barheight) {
+	@return calc(var(--vh, 1vh) * 100 - 4.5rem);
 }
