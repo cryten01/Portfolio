@@ -269,7 +269,7 @@ section {
 header {
   display: flex;
   align-items: center;
-  height: 90vh; }
+  height: calc(var(--vh, 1vh) * 90); }
   header .header-container {
     height: auto; }
   @media (max-width: 480px) {
