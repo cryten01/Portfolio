@@ -200,7 +200,7 @@ section {
   border-color: #393939;
   border-width: thin;
   background: #1a1a1a;
-  margin-bottom: 2.2rem; }
+  margin-bottom: 1.2rem; }
   .img img {
     width: 100%;
     height: 100%;
@@ -333,6 +333,8 @@ header {
       padding-bottom: 2.6rem; } }
 
 .item-container {
+  display: flex;
+  flex-direction: column;
   min-width: 50%; }
 
 .desc {
