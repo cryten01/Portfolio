@@ -9,7 +9,7 @@
   margin: 6% 20%;
 
   @media (max-width: _media(small)) {
-    margin: 12% 20%;
+    margin: 3rem 10%;
   }
 
   height: 3px;
@@ -61,15 +61,20 @@
 
 .tools-container {
   display: grid;
-  grid-gap: 1rem;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2rem;
 
-  @media only screen and (min-width: _media(medium)) {
-    grid-template-columns: 1fr 1fr;
+  @media (max-width: _media(small)) {
+    grid-template-columns: 1fr;
   }
 }
 
 .tools {
   padding-top: 4rem;
+
+  @media (max-width: _media(small)) {
+    padding-top: 2rem;
+  }
 }
 
 /* Contact section */

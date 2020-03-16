@@ -1,6 +1,9 @@
 * {
-  scroll-behavior: smooth;
   box-sizing: border-box;
+  scroll-behavior: smooth;
+
+  /* IOS */
+  -webkit-overflow-scrolling: touch;
 }
 
 body {

@@ -2,8 +2,10 @@
 @import url("fontawesome-all.min.css");
 @import url("https://fonts.googleapis.com/css?family=Spartan:100,200,300,400,500,600,700,800,900&display=swap");
 * {
+  box-sizing: border-box;
   scroll-behavior: smooth;
-  box-sizing: border-box; }
+  /* IOS */
+  -webkit-overflow-scrolling: touch; }
 
 body {
   background-image: url(../images/00-abstract.jpg);
@@ -318,7 +320,7 @@ header {
   height: 3px; }
   @media (max-width: 736px) {
     .solid-divider {
-      margin: 12% 20%; } }
+      margin: 3rem 10%; } }
 
 /* Project section */
 #projects {
@@ -353,13 +355,17 @@ header {
 /* Skills section */
 .tools-container {
   display: grid;
-  grid-gap: 1rem; }
-  @media only screen and (min-width: 992px) {
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2rem; }
+  @media (max-width: 736px) {
     .tools-container {
-      grid-template-columns: 1fr 1fr; } }
+      grid-template-columns: 1fr; } }
 
 .tools {
   padding-top: 4rem; }
+  @media (max-width: 736px) {
+    .tools {
+      padding-top: 2rem; } }
 
 /* Contact section */
 #contact .paragraphs {
