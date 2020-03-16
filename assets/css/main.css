@@ -3,9 +3,7 @@
 @import url("https://fonts.googleapis.com/css?family=Spartan:100,200,300,400,500,600,700,800,900&display=swap");
 * {
   box-sizing: border-box;
-  scroll-behavior: smooth;
-  /* IOS */
-  -webkit-overflow-scrolling: touch; }
+  scroll-behavior: smooth; }
 
 body {
   background-image: url(../images/00-abstract.jpg);
