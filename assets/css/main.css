@@ -69,9 +69,6 @@ h6,
   font-weight: 500;
   margin: 0 0 0.7rem 0; }
 
-h3, h4 {
-  text-indent: .3rem; }
-
 h1 {
   font-size: 5rem; }
   @media (max-width: 736px) {
