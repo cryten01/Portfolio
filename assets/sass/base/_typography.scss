@@ -94,7 +94,8 @@ h4 {
 }
 
 .header-container,
-.heading, .gradient {
+.heading,
+.gradient {
   @include gradient-text();
 }
 

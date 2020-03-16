@@ -22,8 +22,8 @@
 
 @mixin background {
     background-image: $background-img;
+    background-repeat: no-repeat;
     background-attachment: fixed;
-    background-size: cover;
     background-position: 40% 0%;
 
     &:after {

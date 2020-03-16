@@ -29,8 +29,10 @@
 .item {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-gap: 4rem;
 
   @media (max-width: _media(medium)) {
+    grid-gap: 0rem;
     display: inline-flex;
     flex-direction: column;
     padding-bottom: 2.6rem;
@@ -44,11 +46,6 @@
 .desc {
   display: flex;
   flex-direction: column;
-  padding: 2% 0% 2% 6%;
-
-  @media (max-width: _media(medium)) {
-    padding: 0;
-  }
 
   .p-wrapper {
     .heading {
@@ -87,8 +84,4 @@
     margin: 0rem 1rem;
     padding: 0.9rem;
   }
-
-  // @media (max-width: _media(xsmall)) {
-  //   padding: 12% 12%;
-  // }
 }
