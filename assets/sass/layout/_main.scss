@@ -5,6 +5,12 @@
   min-height: 90vh;
 }
 
+#about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .solid-divider {
   margin: 6% 20%;
 

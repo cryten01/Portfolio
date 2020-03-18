@@ -1,13 +1,12 @@
 * {
   box-sizing: border-box;
   scroll-behavior: smooth;
-
-
 }
 
 body {
   @include background();
   margin: 0;
+  padding: 0;
 }
 
 // Ensures page width is always >=320px.
