@@ -7,6 +7,8 @@ body {
   @include background();
   margin: 0;
   padding: 0;
+
+  transition: background .25s ease-in;
 }
 
 // Ensures page width is always >=320px.

@@ -5,7 +5,6 @@ function addProject(imgSource, title, year, desc, tags) {
   newitem.classList.add("item");
   projectContainer.appendChild(newitem);
 
-
   var newImg = document.createElement("div");
   newImg.classList.add("img");
   newImg.classList.add("item-container");
@@ -14,9 +13,6 @@ function addProject(imgSource, title, year, desc, tags) {
   var img = document.createElement("img");
   img.src = imgSource;
   newImg.appendChild(img);
-
-
-
 
   var newDesc = document.createElement("div");
   newDesc.classList.add("desc");
@@ -28,8 +24,6 @@ function addProject(imgSource, title, year, desc, tags) {
   newHeading.textContent = title;
   newDesc.appendChild(newHeading);
 
-
-
   var newStats = document.createElement("div");
   newStats.classList.add("stats");
   newDesc.appendChild(newStats);
@@ -40,7 +34,7 @@ function addProject(imgSource, title, year, desc, tags) {
   newStats.appendChild(developedIn);
 
   var tagContainer = document.createElement("div");
-  tagContainer.classList.add("tags")
+  tagContainer.classList.add("tags");
   newStats.appendChild(tagContainer);
 
   var yearTag = document.createElement("div");
@@ -48,8 +42,6 @@ function addProject(imgSource, title, year, desc, tags) {
   yearTag.textContent = year;
   tagContainer.appendChild(yearTag);
 
-
-  
   var newWrapper = document.createElement("div");
   newWrapper.classList.add("p-wrapper");
   newDesc.appendChild(newWrapper);
@@ -59,8 +51,6 @@ function addProject(imgSource, title, year, desc, tags) {
     temp.textContent = value;
     newWrapper.appendChild(temp);
   }
-
-
 
   var newTagList = document.createElement("div");
   newTagList.classList.add("tags");
@@ -75,10 +65,9 @@ function addProject(imgSource, title, year, desc, tags) {
 }
 
 function loadJSON() {
-
   var xhttp = new XMLHttpRequest();
 
-  xhttp.onreadystatechange = function() {
+  xhttp.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 200) {
       // Typical action to be performed when the document is ready:
       var response = JSON.parse(xhttp.responseText);
@@ -94,6 +83,37 @@ function loadJSON() {
   xhttp.send();
 }
 
+function loadMainContent() {
+  const loader = document.querySelector("#preloader");
+  const wrapper = document.querySelector("#wrapper");
+  const navs = document.querySelectorAll("#nav");
 
+  setTimeout(() => {
+    loader.style.opacity = 0;
+    loader.style.display = "none";
+    wrapper.style.display = "block";
+    navs.forEach((entry) => {
+      entry.style.display = "block";
+    });
 
-loadJSON();
+    setTimeout(() => {
+      wrapper.style.opacity = 1;
+      navs.forEach((entry) => {
+        entry.style.opacity = 1;
+      });
+      body.style.opacity = 1;
+    }, 10);
+  }, 1000);
+}
+
+// Play initial animations on page load.
+// Load main content.
+// Load json.
+window.addEventListener("load", function () {
+  window.setTimeout(function () {
+    $body.classList.remove("is-preload");
+  }, 100);
+  loadMainContent();
+  loadJSON();
+});
+

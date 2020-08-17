@@ -8,6 +8,7 @@
 @import 'base/page';
 @import 'base/typography';
 @import 'base/colors';
+@import 'base/transitions';
 
 // Component
 @import 'components/image';
@@ -15,6 +16,7 @@
 @import 'components/tag';
 @import 'components/stats';
 @import 'components/section';
+@import 'components/preloader';
 
 // Layout
 @import 'layout/wrapper';

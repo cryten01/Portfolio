@@ -7,7 +7,7 @@
       "desc": [
         "The RTR Engine is a small scope render engine designed for learning different engine concepts. It represents the follow up project for Starman’s Roadtrip to Mars and gets continously expanded with new features.",
 
-        "I rebuilt the entire engine from the ground up, added new features such as GUI support, advanced error logging, a camera-path generator tool and new grahic effects such as bloom and shadow mapping."
+        "I rebuilt the entire engine from the ground up, added new features such as GUI support, advanced error logging, a camera-path generator tool and new graphic effects such as bloom and shadow mapping."
       ],
       "tags": ["C/C++", "C#", "Unity"]
     },
