@@ -7,19 +7,21 @@
       name="viewport"
       content="width=device-width, initial-scale=1, user-scalable=no"
     />
-    <meta http-equiv="Content-Security-Policy" content="default-src *;
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src *;
     img-src * 'self' data: https: http:;
     script-src 'self' 'unsafe-inline' 'unsafe-eval' *;
-    style-src  'self' 'unsafe-inline' *">
+    style-src  'self' 'unsafe-inline' *"
+    />
     <link rel="stylesheet" type="text/css" href="assets/css/main.css" />
   </head>
   <body class="is-preload">
     <!-- Preloader -->
     <div id="preloader">
-      <div id="loader">
-      </div>
+      <div id="loader"></div>
     </div>
-    
+
     <!-- Wrapper -->
     <div id="wrapper">
       <!-- Header -->
@@ -46,24 +48,23 @@
 
       <!-- Main -->
       <div id="main">
-
         <!-- About section -->
         <div id="about-point" class="scroll-point"></div>
         <section id="about">
-            <p class="cinematic">
-              Fascinated by <b>inventions</b> and constantly driven by curiosity,
-              I decided to contribute to the <b>XR revolution</b>. Having
-              knowledge in <b>engineering</b> <b>entrepreneurship</b> and
-              <b>design</b> helps me pursue that goal.
-            </p>
-            <div class="solid-divider"></div>
-            <p class="cinematic">
-              So far, I have worked on several software engineering projects. This
-              involved <b>managing a dev team</b> as well as
-              <b>working on the codebase</b> itself. The majority of these
-              projects are geared towards <b>Computer Graphics</b>, one of the
-              fundamental building blocks of XR.
-            </p>
+          <p class="cinematic fade-in">
+            Fascinated by <b>inventions</b> and constantly driven by curiosity,
+            I decided to contribute to the <b>XR revolution</b>. Having
+            knowledge in <b>engineering</b> <b>entrepreneurship</b> and
+            <b>design</b> helps me pursue that goal.
+          </p>
+          <div class="solid-divider"></div>
+          <p class="cinematic fade-in">
+            So far, I have worked on several software engineering projects. This
+            involved <b>managing a dev team</b> as well as
+            <b>working on the codebase</b> itself. The majority of these
+            projects are geared towards <b>Computer Graphics</b>, one of the
+            fundamental building blocks of XR.
+          </p>
         </section>
 
         <!-- Project section -->
@@ -101,7 +102,7 @@
 
         <!-- Skills section -->
         <div id="tools-point" class="scroll-point"></div>
-        <section id="skills">
+        <section id="skills fade-in">
           <div class="skill-container">
             <p class="cinematic">
               In order to <b>realize</b> different <b>engineering projects</b> I
@@ -179,10 +180,10 @@
         <!-- Contact section -->
         <div id="contact-point" class="scroll-point"></div>
         <section id="contact">
-          <div class="portrait">
+          <div class="portrait fade-in">
             <img src="assets/images/09-portrait.jpg" alt="" />
           </div>
-          <div class="paragraphs">
+          <div class="paragraphs fade-in">
             <p class="cinematic">Curious about XR?</p>
             <p class="cinematic">
               Need help for realizing your next XR Project?
@@ -220,6 +221,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="assets/js/main.js"></script>
     <script src="assets/js/viewport.js"></script>
+    <script src="assets/js/transitions.js"></script>
     <!-- <script src="assets/js/scroll.js"></script> -->
   </body>
 </html>

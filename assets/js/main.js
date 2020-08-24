@@ -3,6 +3,7 @@ function addProject(imgSource, title, year, desc, tags) {
 
   var newitem = document.createElement("div");
   newitem.classList.add("item");
+  newitem.classList.add("fade-in");    // TODO: replace
   projectContainer.appendChild(newitem);
 
   var newImg = document.createElement("div");
@@ -17,6 +18,7 @@ function addProject(imgSource, title, year, desc, tags) {
   var newDesc = document.createElement("div");
   newDesc.classList.add("desc");
   newDesc.classList.add("item-container");
+  // newDesc.classList.add("from-right"); // TODO: replace
   newitem.appendChild(newDesc);
 
   var newHeading = document.createElement("h3");
@@ -115,5 +117,8 @@ window.addEventListener("load", function () {
   }, 100);
   loadMainContent();
   loadJSON();
-});
 
+  window.setTimeout(function () {
+    activateTransitions();
+  }, 2000);
+});
