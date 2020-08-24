@@ -36,3 +36,9 @@
 @function _media($keys...) {
 	@return val($media, $keys...);
 }
+
+/// Gets the correct viewport height from javascript
+/// @param {number} $barheight height of the nav bar in rem.
+@function _vh($barheight) {
+	@return calc(var(--vh, 1vh) * 100 - 4.5rem);
+}

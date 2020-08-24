@@ -9,7 +9,8 @@ $palette: (
     hover:      lighten($primary-color, 24),
     backtext:   lighten($primary-color, 28),
     text:       rgb(233, 233, 233),
-    gradient:   -webkit-linear-gradient(red, yellow)
+    gradient:   -webkit-linear-gradient(#FF5E09, #FFAB05),
+    loading:    darkorange
 );
 
 // Font
@@ -24,6 +25,7 @@ $font: (
 // Img
 $background-img: url(../images/00-abstract.jpg);
 $background-opacity: 0.9;
+$loading-opacity: 1;
 
 // Media queries
 $media: (

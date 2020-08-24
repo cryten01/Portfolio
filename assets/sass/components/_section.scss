@@ -1,8 +1,9 @@
 section {
   @include border();
-  padding: 2rem;
+  padding: 4rem;
+
+  @media (max-width: _media(small)) {
+    padding: 2rem 3rem;
+    
+  }
 }
-
-/* Header */
-
-/* Footer */

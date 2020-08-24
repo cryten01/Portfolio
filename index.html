@@ -7,17 +7,27 @@
       name="viewport"
       content="width=device-width, initial-scale=1, user-scalable=no"
     />
+    <meta http-equiv="Content-Security-Policy" content="default-src *;
+    img-src * 'self' data: https: http:;
+    script-src 'self' 'unsafe-inline' 'unsafe-eval' *;
+    style-src  'self' 'unsafe-inline' *">
     <link rel="stylesheet" type="text/css" href="assets/css/main.css" />
   </head>
-  <body>
+  <body class="is-preload">
+    <!-- Preloader -->
+    <div id="preloader">
+      <div id="loader">
+      </div>
+    </div>
+    
     <!-- Wrapper -->
     <div id="wrapper">
       <!-- Header -->
       <header>
         <div class="header-container">
-          <h4>My name is</h4>
-          <h1>Gerhard Andreas</h1>
-          <h3>XR Engineer</h3>
+          <h4 class="gradient">My name is</h4>
+          <h1 class="gradient">Gerhard Andreas</h1>
+          <h3 class="gradient">XR Engineer</h3>
         </div>
       </header>
 
@@ -40,20 +50,20 @@
         <!-- About section -->
         <div id="about-point" class="scroll-point"></div>
         <section id="about">
-          <p class="cinematic">
-            Fascinated by <b>inventions</b> and constantly driven by curiosity,
-            I decided to contribute to the <b>XR revolution</b>. Having
-            knowledge in <b>engineering</b> <b>entrepreneurship</b> and
-            <b>design</b> helps me pursue that goal.
-          </p>
-          <div class="solid-divider"></div>
-          <p class="cinematic">
-            So far, I have worked on several software engineering projects. This
-            involved <b>managing a dev team</b> as well as
-            <b>working on the codebase</b> itself. The majority of these
-            projects are geared towards <b>Computer Graphics</b>, one of the
-            fundamental building blocks of XR.
-          </p>
+            <p class="cinematic">
+              Fascinated by <b>inventions</b> and constantly driven by curiosity,
+              I decided to contribute to the <b>XR revolution</b>. Having
+              knowledge in <b>engineering</b> <b>entrepreneurship</b> and
+              <b>design</b> helps me pursue that goal.
+            </p>
+            <div class="solid-divider"></div>
+            <p class="cinematic">
+              So far, I have worked on several software engineering projects. This
+              involved <b>managing a dev team</b> as well as
+              <b>working on the codebase</b> itself. The majority of these
+              projects are geared towards <b>Computer Graphics</b>, one of the
+              fundamental building blocks of XR.
+            </p>
         </section>
 
         <!-- Project section -->
@@ -151,11 +161,11 @@
               <b></b>connecting different aspects of product development.
             </p>
             <div class="tu tools">
-              <h3 class="heading education">MA - Visual Computing</h3>
+              <h3 class="heading education">MA-Visual Computing</h3>
               <p class="align-left backfont">Vienna Technical University</p>
             </div>
             <div class="wu tools">
-              <h3 class="heading education">BA - Business Administration</h3>
+              <h3 class="heading education">BA-Business Management</h3>
               <p class="align-left backfont">
                 Vienna University of business and economics
               </p>
@@ -207,6 +217,9 @@
     </nav>
 
     <!-- Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/viewport.js"></script>
+    <!-- <script src="assets/js/scroll.js"></script> -->
   </body>
 </html>
