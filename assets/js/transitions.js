@@ -20,7 +20,7 @@ function displayPage() {
   }, 800);
 }
 
-function activateGSAPTransitions() {
+function activateGSAPAnimations() {
   setTimeout(() => {
     gsap.from(".fade-in-intro", {
       scrollTrigger: {
