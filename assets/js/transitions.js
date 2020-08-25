@@ -1,33 +1,77 @@
-appearOptions = {
-  threshold: 0.20,
-};
+function displayPage() {
+  const loader = document.querySelector("#preloader");
+  const wrapper = document.querySelector("#wrapper");
+  const navs = document.querySelectorAll("#nav");
 
-const appearOnScroll = new IntersectionObserver(function (
-  entries,
-  appearOnScroll
-) {
-  entries.forEach((entry) => {
-    if (!entry.isIntersecting) {
-      return;
-    } else {
-      entry.target.classList.add("appear");
-      appearOnScroll.unobserve(entry.target);
-    }
-  });
-},
-appearOptions);
+  setTimeout(() => {
+    loader.style.opacity = 0;
+    loader.style.display = "none";
+    wrapper.style.display = "block";
+    navs.forEach((entry) => {
+      entry.style.display = "block";
+    });
 
-// Execution must be after page content has been loaded
-// TODO: should be based on scroll and not on time
-function activateTransitions() {
-  faders = document.querySelectorAll(".fade-in");
-  sliders = document.querySelectorAll(".from-right");
+    setTimeout(() => {
+      wrapper.style.opacity = 1;
+      navs.forEach((entry) => {
+        entry.style.opacity = 1;
+      });
+    }, 10);
+  }, 800);
+}
 
-  faders.forEach((fader) => {
-    appearOnScroll.observe(fader);
-  });
+function activateGSAPTransitions() {
+  setTimeout(() => {
+    gsap.from(".fade-in-intro", {
+      scrollTrigger: {
+        trigger: ".fade-in-intro",
+        start: "top 90%",
+        end: "center 50%",
+        markers: false,
+        scrub: true, // Apple like scroll effect
+      },
+      scale: 0.96,
+      opacity: 0,
+    });
 
-  sliders.forEach((slider) => {
-    appearOnScroll.observe(slider);
-  });
+    gsap.from(".solid-divider", {
+      scrollTrigger: {
+        trigger: "#about",
+        start: "top 80%",
+        end: "center 40%",
+        markers: false,
+        scrub: true,
+      },
+      scaleX: 0.1,
+    });
+
+    cinematics = document.querySelectorAll(".fade-in-cinematic");
+    cinematics.forEach((cinematic) => {
+      gsap.from(cinematic, {
+        scrollTrigger: {
+          trigger: cinematic,
+          start: "top 90%",
+          end: "center 50%",
+          markers: false,
+          scrub: true, // transition based on sroll position
+        },
+        scale: 0.96,
+        opacity: 0,
+      });
+    });
+
+    faders = document.querySelectorAll(".fade-in");
+    faders.forEach((fader) => {
+      gsap.from(fader, {
+        scrollTrigger: {
+          trigger: fader,
+          start: "top 90%",
+          markers: false,
+          toggleActions: "play none none reverse",
+        },
+        opacity: 0.1,
+        duration: 1.2,
+      });
+    });
+  }, 1000);
 }

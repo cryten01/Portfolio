@@ -51,14 +51,14 @@
         <!-- About section -->
         <div id="about-point" class="scroll-point"></div>
         <section id="about">
-          <p class="cinematic fade-in">
+          <p class="cinematic fade-in-intro">
             Fascinated by <b>inventions</b> and constantly driven by curiosity,
             I decided to contribute to the <b>XR revolution</b>. Having
-            knowledge in <b>engineering</b> <b>entrepreneurship</b> and
+            knowledge in <b>engineering</b>, <b>entrepreneurship</b> and
             <b>design</b> helps me pursue that goal.
           </p>
           <div class="solid-divider"></div>
-          <p class="cinematic fade-in">
+          <p class="cinematic fade-in-intro">
             So far, I have worked on several software engineering projects. This
             involved <b>managing a dev team</b> as well as
             <b>working on the codebase</b> itself. The majority of these
@@ -102,13 +102,13 @@
 
         <!-- Skills section -->
         <div id="tools-point" class="scroll-point"></div>
-        <section id="skills fade-in">
+        <section id="skills">
           <div class="skill-container">
-            <p class="cinematic">
+            <p class="cinematic fade-in-cinematic">
               In order to <b>realize</b> different <b>engineering projects</b> I
               use the following tools:
             </p>
-            <div class="tools-container">
+            <div class="tools-container fade-in">
               <div class="native tools">
                 <h3 class="heading">Native</h3>
                 <div class="tags">
@@ -120,18 +120,17 @@
                   <div class="tag">PhysX</div>
                 </div>
               </div>
-              <div class="web tools">
+              <div class="web tools fade-in">
                 <h3 class="heading">Web</h3>
                 <div class="tags">
                   <div class="tag">HTML</div>
                   <div class="tag">CSS</div>
                   <div class="tag">Javascript</div>
                   <div class="tag">Node</div>
-                  <div class="tag">Express</div>
                   <div class="tag">SQL</div>
                 </div>
               </div>
-              <div class="apps tools">
+              <div class="apps tools fade-in">
                 <h3 class="heading">Apps</h3>
                 <div class="tags">
                   <div class="tag">FL Studio</div>
@@ -144,7 +143,7 @@
                   <div class="tag">Rider</div>
                 </div>
               </div>
-              <div class="other tools">
+              <div class="other tools fade-in">
                 <h3 class="heading">Other</h3>
                 <div class="tags">
                   <div class="tag">Git</div>
@@ -155,22 +154,25 @@
               </div>
             </div>
           </div>
-          <div class="solid-divider"></div>
+        </section>
+
+        <!-- Education section -->
+        <section id="education">
           <div class="skill-container">
-            <p class="cinematic">
+            <p class="cinematic fade-in-cinematic">
               Drawing from <b>multiple backgrounds</b> helps me
               <b></b>connecting different aspects of product development.
             </p>
-            <div class="tu tools">
+            <div class="tu tools fade-in">
               <h3 class="heading education">MA-Visual Computing</h3>
               <p class="align-left backfont">Vienna Technical University</p>
             </div>
-            <div class="wu tools">
+            <div class="wu tools fade-in">
               <h3 class="heading education">BA-Business Management</h3>
               <p class="align-left backfont">
                 Vienna University of business and economics
               </p>
-              <p class="cinematic align-left">
+              <p class="align-left cinematic">
                 Major in Entreprenurship and Innovation
               </p>
             </div>
@@ -180,15 +182,17 @@
         <!-- Contact section -->
         <div id="contact-point" class="scroll-point"></div>
         <section id="contact">
-          <div class="portrait fade-in">
+          <div class="portrait fade-in-cinematic">
             <img src="assets/images/09-portrait.jpg" alt="" />
           </div>
-          <div class="paragraphs fade-in">
-            <p class="cinematic">Curious about XR?</p>
-            <p class="cinematic">
+          <div class="paragraphs">
+            <p class="cinematic fade-in-cinematic">Curious about XR?</p>
+            <p class="cinematic fade-in-cinematic">
               Need help for realizing your next XR Project?
             </p>
-            <p class="cinematic">Feel free to <b>contact me</b></p>
+            <p class="cinematic fade-in-cinematic">
+              Feel free to <b>contact me</b>
+            </p>
           </div>
           <div class="icons">
             <a class="icon" href="https://github.com/cryten01"
@@ -209,6 +213,7 @@
       </footer>
     </div>
 
+    <!-- Back to top-->
     <nav id="nav">
       <ul class="v1 button-container">
         <li class="v1 button">
@@ -218,10 +223,12 @@
     </nav>
 
     <!-- Scripts -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/ScrollTrigger.min.js"></script>
     <script src="assets/js/main.js"></script>
     <script src="assets/js/viewport.js"></script>
     <script src="assets/js/transitions.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
     <!-- <script src="assets/js/scroll.js"></script> -->
   </body>
 </html>

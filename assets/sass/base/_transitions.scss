@@ -4,20 +4,6 @@
   transition: opacity 200ms ease-in;
 }
 
-.fade-in {
-  opacity: 0;
-  transition: opacity 250ms ease-in;
-}
-
 .fade-in.appear {
   opacity: 1;
-}
-
-.from-right {
-  transform: translateX(+50%);
-  transition: transform 400ms ease-in;
-}
-
-.from-right.appear {
-  transform: translateX(0);
 }

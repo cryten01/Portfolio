@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/cryten01/Portfolio#readme",
   "dependencies": {
+    "gsap": "^3.5.0",
     "node-sass": "^4.13.1"
   }
 }

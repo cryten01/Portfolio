@@ -3,7 +3,7 @@ function addProject(imgSource, title, year, desc, tags) {
 
   var newitem = document.createElement("div");
   newitem.classList.add("item");
-  newitem.classList.add("fade-in");    // TODO: replace
+  newitem.classList.add("fade-in"); // TODO: replace
   projectContainer.appendChild(newitem);
 
   var newImg = document.createElement("div");
@@ -66,7 +66,7 @@ function addProject(imgSource, title, year, desc, tags) {
   }
 }
 
-function loadJSON() {
+function requestProjectsFromJSON() {
   var xhttp = new XMLHttpRequest();
 
   xhttp.onreadystatechange = function () {
@@ -81,44 +81,14 @@ function loadJSON() {
     }
   };
 
-  xhttp.open("GET", "assets/json/projects.json", true);
+  // False makes request synchronous and ensures projects have finished loading
+  xhttp.open("GET", "assets/json/projects.json", false);
   xhttp.send();
 }
 
-function loadMainContent() {
-  const loader = document.querySelector("#preloader");
-  const wrapper = document.querySelector("#wrapper");
-  const navs = document.querySelectorAll("#nav");
-
-  setTimeout(() => {
-    loader.style.opacity = 0;
-    loader.style.display = "none";
-    wrapper.style.display = "block";
-    navs.forEach((entry) => {
-      entry.style.display = "block";
-    });
-
-    setTimeout(() => {
-      wrapper.style.opacity = 1;
-      navs.forEach((entry) => {
-        entry.style.opacity = 1;
-      });
-      body.style.opacity = 1;
-    }, 10);
-  }, 1000);
-}
-
-// Play initial animations on page load.
-// Load main content.
-// Load json.
 window.addEventListener("load", function () {
-  window.setTimeout(function () {
-    $body.classList.remove("is-preload");
-  }, 100);
-  loadMainContent();
-  loadJSON();
-
-  window.setTimeout(function () {
-    activateTransitions();
-  }, 2000);
+  requestProjectsFromJSON();
+  displayPage();
+  activateGSAPAnimations();
+  document.classList.remove("is-preload");
 });

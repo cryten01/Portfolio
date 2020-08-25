@@ -7,13 +7,13 @@ body {
   @include background();
   margin: 0;
   padding: 0;
-
-  transition: background .25s ease-in;
 }
 
 // Ensures page width is always >=320px.
 @media (max-width: _media(small)) {
-  min-width: 320px;
+  html {
+    min-width: 320px;
+  }
 }
 
 ul {
